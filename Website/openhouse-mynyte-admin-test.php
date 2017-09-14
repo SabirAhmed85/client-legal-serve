@@ -9,6 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <title>Property Search | Estate &amp; Letting Agents Bedford | Open House</title>
+  
+  <link rel="icon" href="images/home-favicon.ico?crc=448483105" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/home-favicon.ico?crc=448483105" type="image/x-icon" />
 
   <link rel="stylesheet" href="https://webfonts.creativecloud.com/c/69721a/1w;quicksand,2,WXp:W:n4,WXn:W:n7/l" media="all">
   <link rel="stylesheet" type="text/css" href="css/mynyte-css-overwrite.css"/>
