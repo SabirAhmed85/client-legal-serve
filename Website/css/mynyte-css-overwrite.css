@@ -33,6 +33,7 @@ label.mynyte-form-field-label {
     max-width: calc(100% - 32px);
 }
 
+.mynyte-business-items-summary-item a.action-button,
 .mynyte-business-items-summary-item a.view-detail-button {
     float: right;
     clear: both;
