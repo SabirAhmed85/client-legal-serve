@@ -46,3 +46,7 @@ label.mynyte-form-field-label {
     font-weight: normal;
     text-decoration: none;
 }
+
+.dropdown-wrapper .mynyte-business-items-summary-item a.action-button {
+    margin-top: 10px;
+}
