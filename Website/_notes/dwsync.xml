@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="enquiries-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522772904" remote="131507221800000000" Dst="2" />
-<file name="landlords-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522772904" remote="131507221800000000" Dst="2" />
-<file name="landlord-upload.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522772904" remote="131507221800000000" Dst="2" />
-<file name="open-tickets-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522772904" remote="131507221800000000" Dst="2" />
-<file name="openhouse-mynyte-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507259139608133" remote="131507223000000000" Dst="2" />
-<file name="properties-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522772904" remote="131507221800000000" Dst="2" />
-<file name="property-upload.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
-<file name="tennant-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
-<file name="landlord-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522772904" remote="131507221800000000" Dst="2" />
-<file name="tennant-upload.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
-<file name="tennants-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
-<file name="tickets-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
-<file name="unread-enquiries-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
-<file name="unread-tickets-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131507235522929172" remote="131507221800000000" Dst="2" />
+<file name="openhouse-mynyte-admin.php" server="ftp.openhousebedford.co.uk//public_html/" local="131544552233784703" remote="131544046200000000" Dst="1" />
+<file name="openhouse-property-service-request.php" server="ftp.openhousebedford.co.uk//public_html/" local="131544582702377959" remote="131544582600000000" Dst="1" />
+<file name="openhouse-property-service-email.php" server="ftp.openhousebedford.co.uk//public_html/" local="131544594178159593" remote="131544594000000000" Dst="1" />
 </dwsync>
