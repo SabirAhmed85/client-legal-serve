@@ -83,7 +83,7 @@
           <div class="admin-section images">
             <div class="admin-section-header">
               <h2>
-                <i class="fa fa-picture-o left-icon"></i>Upload Image(s)
+                <i class="fa fa-picture-o left-icon"></i>Upload Image(s)<span class="optional">Optional</span>
               </h2>
             </div>
             <div class="admin-section-body trans">
@@ -102,7 +102,7 @@
             </div>
           </div>
           
-          <button id="submit-request" onclick="submitRequest()" class="button-disabled" disabled="disabled">
+          <button id="submit-request" onclick="submitRequest()" class="button-disabled main" disabled="disabled">
           	Submit Your Request
           </button>
   
@@ -130,6 +130,16 @@
   
         <?php include_once("snippets/main-sidebar.php")?>
 	  </div>
+    </div>
+    
+    <div id="cover-overlay">
+    	<div class="pop-up">
+        	<p id="popup-message" class="main-content">
+            </p>
+            <button class="main" onclick="togglePopUp('close', null)">
+            	Close
+            </button>
+        </div>
     </div>
 
     <?php include_once("snippets/footer.php") ?>
@@ -193,22 +203,54 @@
 		  var descVal = document.getElementById('description').value;
 		  var nameVal = document.getElementById('name').value;
 		  var addressVal = document.getElementById('address').value;
-      var images = document.getElementById('images').files;
-      var button = document.getElementById('submit-request');
-      var xhttp = new XMLHttpRequest();
-
-      button.innerHTML = 'Submitting...';
-      button.setAttribute('disabled', 'disabled');
-      button.className += (!button.classList.contains('button-disabled')) ? ' button-disabled': '';
-
-      if (checkIfFormComplete() == true) {
-  		  xhttp.open("POST", "http://openhousebedford.co.uk/openhouse-property-service-email.php", true);
-  		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    		xhttp.send("service="+currentService+"&desc="+descVal+"&name="+nameVal+"&address="+addressVal+"&images="+images);
-      }
-      else {
-        button.innerHTML = 'Submit Yoour Request';
-      }
+		  //var images = document.getElementById('images').files;
+		  var button = document.getElementById('submit-request');
+		  var xhttp = new XMLHttpRequest();
+	
+		  button.innerHTML = 'Submitting...';
+		  button.setAttribute('disabled', 'disabled');
+		  button.className += (!button.classList.contains('button-disabled')) ? ' button-disabled': '';
+	
+		  if (checkIfFormComplete() == true) {
+			  /*
+			  xhttp.open("POST", "http://openhousebedford.co.uk/openhouse-property-service-email.php", true);
+			  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			  xhttp.send("service="+currentService+"&desc="+descVal+"&name="+nameVal+"&address="+addressVal);
+			  */
+			  document.getElementById('description').value = "";
+			  //var images = document.getElementById('images').files;
+			  
+			  document.querySelectorAll('.service-type-label.active')[0].classList.remove("active");
+			  document.querySelectorAll('.admin-section.description')[0].querySelectorAll('.admin-section-body')[0].classList.remove("open");
+			  document.querySelectorAll('.admin-section.images')[0].querySelectorAll('.admin-section-body')[0].classList.remove("open");
+			  document.querySelectorAll('.admin-section.details')[0].querySelectorAll('.admin-section-body')[0].classList.remove("open");
+			  
+			  button.innerHTML = 'Submit Your Request';
+			  button.removeAttribute('disabled');
+		  
+			  togglePopUp('open', 'success');
+		  }
+		  else {
+			  button.innerHTML = 'Submit Your Request';
+			  
+			  togglePopUp('open', 'error');
+		  }
+	  }
+	  
+	  function togglePopUp(state, message) {
+		  var overlay = document.querySelectorAll('#cover-overlay')[0];
+		  console.log(overlay);
+		  
+		  if (state == 'close') {
+			  overlay.classList.remove("open");
+		  } else {
+			  var message = (message == 'success') ? 
+				"Thanks. Your Service Request has been submitted, and we will be in contact with you once we have been able to review it.": 
+				"Oops. There was an error with some of the details you entered. Please check them and try again.";
+				
+			  overlay.querySelectorAll('#popup-message')[0].innerHTML = message;
+			  overlay.className += " open";
+		  }
 	  }
   </script>
 </html>
