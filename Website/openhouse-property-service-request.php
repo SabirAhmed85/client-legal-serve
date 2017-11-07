@@ -34,67 +34,75 @@
           <div class="admin-section">
             <div class="admin-section-header">
               <h2>
-                <i class="fa fa-ticket left-icon"></i>Select Service Required
-                <i class="fa fa-arrow-up" onclick="showSubSection(this)"></i>
+                <i class="fa fa-wrench left-icon"></i>Select Service Required
               </h2>
             </div>
             <div class="admin-section-body open trans">
               <a class="service-type-label Water" onclick="selectService('Water')">
-                <i class="fa fa-eye-slash trans"></i>
+                <i class="fa fa-tint trans"></i>
                 <span>Water</span>
               </a>
               <a class="service-type-label Gas" onclick="selectService('Gas')">
-                <i class="fa fa-folder-open trans"></i>
+                <i class="fa fa-fire trans"></i>
                 <span>Gas</span>
               </a>
   
               <a class="service-type-label Electricity" onclick="selectService('Electricity')">
-                <i class="fa fa-ticket trans"></i>
+                <i class="fa fa-bolt trans"></i>
                 <span>Electricity</span>
+              </a>
+
+              <a class="service-type-label Internet" onclick="selectService('Internet')">
+                <i class="fa fa-internet-explorer trans"></i>
+                <span>Internet</span>
+              </a>
+
+              <a class="service-type-label Window" onclick="selectService('Window')">
+                <i class="fa fa-window-restore trans"></i>
+                <span>Windows</span>
+              </a>
+
+              <a class="service-type-label Something" onclick="selectService('Something')">
+                <i class="fa fa-question trans"></i>
+                <span>Something</span>
               </a>
             </div>
           </div>
   
-          <div class="admin-section">
+          <div class="admin-section description">
             <div class="admin-section-header">
               <h2>
-                <i class="fa fa-phone-square left-icon"></i>Description
-                <i class="fa fa-arrow-up" onclick="showSubSection(this)"></i>
+                <i class="fa fa-align-left left-icon"></i>Description
               </h2>
             </div>
-            <div class="admin-section-body open trans">
-            	<textarea name="description" id="description" placeholder="Describe your Problem"></textarea>
+            <div class="admin-section-body trans">
+            	<textarea name="description" id="description" placeholder="Describe your Problem" onblur="checkIfDescriptionFilled()"></textarea>
             </div>
           </div>
   
-          <div class="admin-section">
+          <div class="admin-section images">
             <div class="admin-section-header">
               <h2>
-                <i class="fa fa-building left-icon"></i>Upload Image(s)
-                <i class="fa fa-arrow-up" onclick="showSubSection(this)"></i>
+                <i class="fa fa-picture-o left-icon"></i>Upload Image(s)
               </h2>
             </div>
-            <div class="admin-section-body open trans">
-              <input name="images[]" type="file" />
-              <button id="add-image">
-              	Add Another Image
-              </button>
+            <div class="admin-section-body trans">
+              <input name="images" id="images" type="file" multiple />
             </div>
           </div>
-          <div class="admin-section">
+          <div class="admin-section details">
             <div class="admin-section-header">
               <h2>
-                <i class="fa fa-key left-icon"></i>Your Details
-                <i class="fa fa-arrow-up" onclick="showSubSection(this)"></i>
+                <i class="fa fa-user left-icon"></i>Your Details
               </h2>
             </div>
-            <div class="admin-section-body open trans">
-              <input name="name" id="name" type="text" placeholder="Your Name" />
-              <textarea name="address" id="address" placeholder="Your Address"></textarea>
+            <div class="admin-section-body trans">
+              <input name="name" id="name" type="text" placeholder="Your Name" onblur="checkIfFormComplete()" />
+              <textarea name="address" id="address" placeholder="Your Address" onblur="checkIfFormComplete()"></textarea>
             </div>
           </div>
           
-          <button onclick="submitRequest()">
+          <button id="submit-request" onclick="submitRequest()" class="button-disabled" disabled="disabled">
           	Submit Your Request
           </button>
   
@@ -142,9 +150,6 @@
   
   <script type="text/javascript">
 	  var currentService = null;
-	  var descriptionLocked = true;
-	  var imagesLocked = true;
-	  var detailsLocked = true;
 	  
 	  function selectService (service) {
 		  currentService = service;
@@ -153,29 +158,57 @@
 			  document.querySelectorAll('.service-type-label.active')[0].classList.remove("active");
 		  }
 		  document.querySelectorAll('.service-type-label.'+currentService)[0].className += " active";
-		  
-		  descriptionLocked = false;
+      document.querySelectorAll('.admin-section.description')[0].querySelectorAll('.admin-section-body')[0].className += " open";
 	  }
 	  
 	  function checkIfDescriptionFilled() {
-		  var desc = document.getElementById('description').innerHTML;
+		  var desc = document.getElementById('description').value;
 		  
 		  if (desc.length > 0) {
-			  imagesLocked = false;
-			  detailsLocked = false;
+        document.querySelectorAll('.admin-section.images')[0].querySelectorAll('.admin-section-body')[0].className += " open";
+        document.querySelectorAll('.admin-section.details')[0].querySelectorAll('.admin-section-body')[0].className += " open";
+
+        checkIfFormComplete();
 		  }
 	  }
+
+    function checkIfFormComplete() {
+      var descVal = document.getElementById('description').value;
+      var nameVal = document.getElementById('name').value;
+      var addressVal = document.getElementById('address').value;
+      var button = document.getElementById('submit-request');
+
+      if (descVal == '' || nameVal == '' || addressVal == '') {
+        button.setAttribute('disabled', 'disabled');
+        button.className += (!button.classList.contains('button-disabled')) ? ' button-disabled': '';
+        return false;
+      } else {
+        button.removeAttribute('disabled');
+        button.classList.remove('button-disabled');
+        return true;
+      }
+    }
 	  
 	  function submitRequest() {
 		  var descVal = document.getElementById('description').value;
 		  var nameVal = document.getElementById('name').value;
 		  var addressVal = document.getElementById('address').value;
-		  
-		  console.log(currentService, descVal, nameVal, addressVal);
-		  var xhttp = new XMLHttpRequest();
-		  xhttp.open("POST", "http://openhousebedford.co.uk/openhouse-property-service-email.php", true);
-		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  		  xhttp.send("service="+currentService+"&desc="+descVal+"&name="+nameVal+"&address="+addressVal);
+      var images = document.getElementById('images').files;
+      var button = document.getElementById('submit-request');
+      var xhttp = new XMLHttpRequest();
+
+      button.innerHTML = 'Submitting...';
+      button.setAttribute('disabled', 'disabled');
+      button.className += (!button.classList.contains('button-disabled')) ? ' button-disabled': '';
+
+      if (checkIfFormComplete() == true) {
+  		  xhttp.open("POST", "http://openhousebedford.co.uk/openhouse-property-service-email.php", true);
+  		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    		xhttp.send("service="+currentService+"&desc="+descVal+"&name="+nameVal+"&address="+addressVal+"&images="+images);
+      }
+      else {
+        button.innerHTML = 'Submit Yoour Request';
+      }
 	  }
   </script>
 </html>

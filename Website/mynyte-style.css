@@ -340,7 +340,7 @@ div.nav-menu-extra {
     padding-top: 15px;
     background: #e0e0e0;
     padding-bottom: 15px;
-	min-height: 60vh;
+    min-height: 60vh;
 }
 
 .main-page-container-inner {
@@ -464,12 +464,15 @@ div.nav-menu-extra {
     text-align: center;
     text-decoration: none;
     color: #a90165;
-    padding: 10px 5px;
+    padding: 25px 5px;
     min-height: 79px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .admin-section-body a:hover, .admin-section-body a.active {
     background: #ddd;
     color: #af4082;
+    cursor: pointer;
 }
 
 .admin-section-body a i {
@@ -500,6 +503,7 @@ div.nav-menu-extra {
     border-radius: 4px;
     font-family: quicksand, ariel, sans-serif;
     padding: 5px;
+    font-size: 13px;
 }
 
 .admin-section input {
@@ -511,16 +515,38 @@ div.nav-menu-extra {
     padding: 5px 10px;
     margin-bottom: 15px;
     font-family: quicksand, ariel, sans-serif;
+    font-size: 13px;
+}
+
+.admin-section input[type="file"] {
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .admin-section input[type="button"],
-.admin-section button {
+.admin-section button,
+.admin-section-wrapper button  {
     background: #a90165;
     border: 1px solid #77064a;
     height: 40px;
     padding: 10px;
     color: #ddd;
     font-family: quicksand, ariel, sans-serif;
+    font-size: 13px;
+}
+.admin-section-wrapper button {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    margin: 10px 5px 20px 0;
+    font-size: 15px;
+    padding: 15px 45px;
+    height: 50px;
+}
+.admin-section-wrapper button.button-disabled {
+    background: #7d014b;
+    color: #c8accc;
+    cursor: not-allowed;
 }
 
 .admin-section button#add-image {
@@ -619,7 +645,7 @@ div.nav-menu-extra {
     background: #e9e9e9;
     font-size: 13px;
     border: 1px solid #aaa;
-	font-weight: normal;
+    font-weight: normal;
 }
 
 .unread-item-container div .counter-note:hover {
