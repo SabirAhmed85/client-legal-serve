@@ -466,6 +466,9 @@ div.nav-menu-extra {
     padding: 10px;
     border-color: #bda2c0;
 }
+.admin-section-body.services-container {
+    max-height: none;
+}
 
 .admin-section-body a {
     width: calc(33.33% - 15px);
@@ -573,6 +576,45 @@ div.nav-menu-extra {
 
 .admin-section button#add-image {
     float: right;
+}
+
+.admin-section .select-container,
+.admin-section .text-input-container {
+    float: left;
+    width: 100%;
+}
+
+.admin-section .select-container {
+    padding: 0 5px 5px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: calc(100% - 10px);
+}
+
+.admin-section .select-container p {
+    padding: 0 5px;
+    width: calc(100% - 10px);
+}
+
+.admin-section .select-container .option {
+    padding: 0 5px;
+    width: calc(100% - 30px);
+    float: left;
+    border: 1px solid #bf98af;
+    padding: 20px 10px;
+    margin: 0 5px;
+    background: #e0bad0;
+}
+.admin-section .select-container .option:hover {
+    border: 1px solid #af8ca0;
+    background: #f7ddec;
+    cursor: pointer;
+}
+
+.admin-section .select-container .option.active {
+    border: 1px solid #9e3e75;
+    background: #ca2788;
+    color: #ded8d8;
 }
 
 /* Generic Buttons */

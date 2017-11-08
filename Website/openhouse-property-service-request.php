@@ -37,32 +37,32 @@
                 <i class="fa fa-wrench left-icon"></i>Select Service Required
               </h2>
             </div>
-            <div class="admin-section-body open trans">
-              <a class="service-type-label Water" onclick="selectService('Water')">
+            <div class="admin-section-body services-container open trans">
+              <a class="service-type-label Water" onclick="selectService('Water', null)">
                 <i class="fa fa-tint trans"></i>
                 <span>Water</span>
               </a>
-              <a class="service-type-label Gas" onclick="selectService('Gas')">
+              <a class="service-type-label Gas" onclick="selectService('Gas', null)">
                 <i class="fa fa-fire trans"></i>
                 <span>Gas</span>
               </a>
   
-              <a class="service-type-label Electricity" onclick="selectService('Electricity')">
+              <a class="service-type-label Electricity" onclick="selectService('Electricity', null)">
                 <i class="fa fa-bolt trans"></i>
                 <span>Electricity</span>
               </a>
 
-              <a class="service-type-label Internet" onclick="selectService('Internet')">
+              <a class="service-type-label Internet" onclick="selectService('Internet', null)">
                 <i class="fa fa-internet-explorer trans"></i>
                 <span>Internet</span>
               </a>
 
-              <a class="service-type-label Window" onclick="selectService('Window')">
+              <a class="service-type-label Window" onclick="selectService('Window', null)">
                 <i class="fa fa-window-restore trans"></i>
                 <span>Windows</span>
               </a>
 
-              <a class="service-type-label Something" onclick="selectService('Something')">
+              <a class="service-type-label Something" onclick="selectService('Something', null)">
                 <i class="fa fa-question trans"></i>
                 <span>Something</span>
               </a>
@@ -160,16 +160,166 @@
   
   <script type="text/javascript">
 	  var currentService = null;
+    var currentObj = null;
+
+    var servicesObj = {
+      'Gas': {
+        'sub-options': {
+          'Users': {
+            'icon': 'fa-users',
+            'value': 'Users',
+            'label': 'Users',
+            'sub-options': {
+              'Users': {
+                'icon': 'fa-users',
+                'value': 'Users',
+                'label': 'Users'
+              }
+            }
+          },
+          'Something': {
+            'icon': 'fa-key',
+            'value': 'Something',
+            'label': 'Something',
+            'sub-options': {
+              'Users': {
+                'icon': 'fa-users',
+                'value': 'Users',
+                'label': 'Users'
+              }
+            },
+            'form-elements': [
+              {
+                'elemType': 'text-input',
+                'placeholder': 'Enter Details About Something'
+              },
+              {
+                'elemType': 'select',
+                'selectType': 'multi-select',
+                'label': 'Please Select a few of the Following Options',
+                'options': [
+                  {
+                    'label': 'Select Option 1'
+                  },
+                  {
+                    'label': 'Select Option 2'
+                  }
+                ]
+              },
+              {
+                'elemType': 'select',
+                'selectType': 'single-select',
+                'label': 'Please Select one of the Following Options',
+                'options': [
+                  {
+                    'label': 'Select Option 1'
+                  },
+                  {
+                    'label': 'Select Option 2'
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      'Water': {
+
+      },
+      'Electricity': {
+
+      }
+    };
+
+    function createIconHtml(optionDetails, masterServiceArray) {
+      var html = "";
+      html += '<a class="service-type-label '+optionDetails.value+'" onclick="selectService(\''+optionDetails.value+'\', \''+masterServiceArray+'\')">';
+      html += '<i class="fa '+optionDetails.icon+' trans"></i>'
+      html += '<span>'+optionDetails.label+'</span>'
+      html += '</a>';
+
+      return html;
+    }
+
+    function createFormItemHtml(optionDetails, masterServiceArray) {
+      var html = "";
+      var elem = optionDetails.elemType;
+      
+      html += "<div class='" + elem + "-container'>";
+
+      html += (optionDetails.label) ? "<p>"+optionDetails.label+"</p>": "";
+      html += (elem == 'text-input') ? "<input type='text' placeholder='"+optionDetails.placeholder+"' />": "";
+
+      if (elem == 'select') {
+        for (var a = 0; a < optionDetails.options.length; a++) {
+          html += "<div class='option'>"+ optionDetails.options[a].label +"</div>";
+        }
+      }
+
+      html += "</div>";
+
+      return html;
+    }
+
+    function addIconHtmlToSecondStage(newIconsHtml, masterServiceArray) {
+      document.querySelectorAll(".admin-section-body.services-container")[0].innerHTML = newIconsHtml;
+    }
+
+    function createIconsAndFormElemsFromOptions(obj, masterServiceArrayString) {
+      var newHtml = "";
+      if (obj['sub-options'] != null) {
+        for (var option in obj['sub-options']) {
+          newHtml += createIconHtml(obj['sub-options'][option], masterServiceArrayString);
+        }
+      }
+
+      if (obj['form-elements'] != null) {
+        console.log(newHtml);
+        for (var a = 0; a < obj['form-elements'].length; a++) {
+          newHtml += createFormItemHtml(obj['form-elements'][a], masterServiceArrayString);
+        }
+      }
+
+      if (newHtml != "") {
+        addIconHtmlToSecondStage(newHtml);
+      }
+    }
 	  
-	  function selectService (service) {
-		  currentService = service;
+	  function selectService (service, masterServiceArray) {
+		  var currentService = service;
+      var relObj = null;
+      console.log(currentObj);
 		  
 		  if (document.querySelectorAll('.service-type-label.active').length) {
 			  document.querySelectorAll('.service-type-label.active')[0].classList.remove("active");
 		  }
 		  document.querySelectorAll('.service-type-label.'+currentService)[0].className += " active";
-      document.querySelectorAll('.admin-section.description')[0].querySelectorAll('.admin-section-body')[0].className += " open";
+
+      if (masterServiceArray == null) {
+        masterServiceArray = '[' + currentService + ']';
+        masterServiceArrayString = currentService;
+        servicesObj[currentService].active = true;
+        currentObj = servicesObj[currentService];
+        console.log(currentObj);
+        createIconsAndFormElemsFromOptions(servicesObj[currentService], masterServiceArrayString);
+      }
+      else {
+        masterServiceArrayString += ", " + currentService;
+        console.log(masterServiceArrayString);
+        currentObj = currentObj["sub-options"][currentService];
+        currentObj.active = true;
+        console.log(currentObj);
+
+        createIconsAndFormElemsFromOptions(currentObj, masterServiceArrayString);
+        console.log(servicesObj);
+      }
+
+      completeServiceSelection();
 	  }
+
+    function completeServiceSelection () {
+      document.querySelectorAll('.admin-section.description')[0].querySelectorAll('.admin-section-body')[0].className += " open";
+    }
 	  
 	  function checkIfDescriptionFilled() {
 		  var desc = document.getElementById('description').value;
