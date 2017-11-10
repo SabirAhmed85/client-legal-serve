@@ -508,6 +508,14 @@ div.nav-menu-extra {
     margin: 0 auto;
 }
 
+.admin-section-body.services-container form {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px dotted #c587ac;
+    padding-top: 20px;
+}
+
 .admin-section textarea {
     float: left;
     width: calc(100% - 12px);

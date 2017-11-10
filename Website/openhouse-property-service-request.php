@@ -161,6 +161,7 @@
   <script type="text/javascript">
 	  var currentService = null;
     var currentObj = null;
+    var overallObj = {};
 
     var servicesObj = {
       'Gas': {
@@ -185,41 +186,85 @@
               'Users': {
                 'icon': 'fa-users',
                 'value': 'Users',
-                'label': 'Users'
-              }
-            },
-            'form-elements': [
-              {
-                'elemType': 'text-input',
-                'placeholder': 'Enter Details About Something'
-              },
-              {
-                'elemType': 'select',
-                'selectType': 'multi-select',
-                'label': 'Please Select a few of the Following Options',
-                'options': [
+                'label': 'Users',
+                'form-elements': [
                   {
-                    'label': 'Select Option 1'
+                    'elemType': 'text-input',
+                    'idLabel': 'details-something',
+                    'label': 'Enter Details about Something',
+                    'placeholder': 'Enter Details About Something'
                   },
                   {
-                    'label': 'Select Option 2'
-                  }
-                ]
-              },
-              {
-                'elemType': 'select',
-                'selectType': 'single-select',
-                'label': 'Please Select one of the Following Options',
-                'options': [
-                  {
-                    'label': 'Select Option 1'
+                    'elemType': 'select',
+                    'selectMaxNum': '0',
+                    'selectMinNum': '0',
+                    'selectedVals': [],
+                    'label': 'Please Select a few of the Following Options',
+                    'options': [
+                      {
+                        'label': 'Select Option 1'
+                      },
+                      {
+                        'label': 'Select Option 2'
+                      }
+                    ]
                   },
                   {
-                    'label': 'Select Option 2'
+                    'elemType': 'select',
+                    'selectMaxNum': '1',
+                    'selectMinNum': '1',
+                    'selectedVals': [],
+                    'label': 'Please Select one of the Following Options',
+                    'options': [
+                      {
+                        'label': 'Select Option 1',
+                        'form-elements': [
+                          {
+                            'elemType': 'text-input',
+                            'idLabel': 'details-something',
+                            'label': 'Enter Details about Something',
+                            'placeholder': 'Enter Details About Something'
+                          },
+                          {
+                            'elemType': 'select',
+                            'selectMaxNum': '0',
+                            'selectMinNum': '0',
+                            'selectedVals': [],
+                            'label': 'Please Select a few of the Following Options',
+                            'options': [
+                              {
+                                'label': 'Select Option 1'
+                              },
+                              {
+                                'label': 'Select Option 2'
+                              }
+                            ]
+                          },
+                          {
+                            'elemType': 'select',
+                            'selectMaxNum': '1',
+                            'selectMinNum': '1',
+                            'selectedVals': [],
+                            'label': 'Please Select one of the Following Options',
+                            'options': [
+                              {
+                                'label': 'Select Option 1'
+                              },
+                              {
+                                'label': 'Select Option 2'
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        'label': 'Select Option 2'
+                      }
+                    ]
                   }
                 ]
               }
-            ]
+            }
           }
         }
       },
@@ -247,15 +292,17 @@
       
       html += "<div class='" + elem + "-container'>";
 
+      html += (optionDetails.beforeNote) ? "<p class='before-note'>"+optionDetails.beforeNote+"</p>": "";
       html += (optionDetails.label) ? "<p>"+optionDetails.label+"</p>": "";
-      html += (elem == 'text-input') ? "<input type='text' placeholder='"+optionDetails.placeholder+"' />": "";
+      html += (elem == 'text-input') ? '<input type="text" id="'+optionDetails.idLabel+'" onblur="registerFormInputVal(\''+optionDetails.idLabel+'\')" placeholder="'+optionDetails.placeholder+'" />': "";
 
       if (elem == 'select') {
         for (var a = 0; a < optionDetails.options.length; a++) {
-          html += "<div class='option'>"+ optionDetails.options[a].label +"</div>";
+          html += '<div class="option" onclick="selectFormSelectOption(this, \''+optionDetails.options[a].label+'\', \''+optionDetails.selectMaxNum+'\',\''+optionDetails.selectMinNum+'\', \''+optionDetails.label+'\')">'+ optionDetails.options[a].label +"</div>";
         }
       }
 
+      html += (optionDetails.afterNote) ? "<p class='after-note'>"+optionDetails.afterNote+"</p>": "";
       html += "</div>";
 
       return html;
@@ -275,14 +322,84 @@
 
       if (obj['form-elements'] != null) {
         console.log(newHtml);
+        newHtml += "<form>";
         for (var a = 0; a < obj['form-elements'].length; a++) {
           newHtml += createFormItemHtml(obj['form-elements'][a], masterServiceArrayString);
         }
+        newHtml += "</form>";
       }
 
       if (newHtml != "") {
         addIconHtmlToSecondStage(newHtml);
       }
+    }
+
+    function registerFormInputVal(id) {
+      for (var a = 0; a < currentObj['form-elements'].length; a++) {
+        if (currentObj['form-elements'][a]['idLabel'] == id) {
+          currentObj['form-elements'][a]['selectedVal'] = document.querySelectorAll('#'+id)[0].value;
+        }
+      }
+    }
+
+    function selectFormSelectOption(elem, optionLabel, optionMax, optionMin, parentLabel) {
+      var currentObjIndex = null;
+
+      function addSelectedValToCurrentObj() {
+        currentObj['form-elements'][currentObjIndex]['selectedVals'].push(optionLabel);
+      }
+
+      function removeSelectedValFromCurrentObj() {
+        currentObj['form-elements'][currentObjIndex]['selectedVals'].splice(currentObj['form-elements'][a]['selectedVals'].indexOf(optionLabel), 1);
+      }
+      console.log(elem, optionLabel, optionMax, optionMin, elem.classList.contains("active"));
+      function deactivateOtherObjects() {
+        var otherOptions = elem.parentNode.children;
+        for (var a = 0; a < otherOptions.length; a++) {
+          if (otherOptions[a] != elem) {
+            otherOptions[a].classList.remove("active");
+          }
+        }
+      }
+
+      function processSelectedVal() {
+        if (elem.classList.contains("active") == true) {
+          console.log("why");
+          elem.classList.remove("active");
+          removeSelectedValFromCurrentObj();
+        }
+        else if ((currentCount + 1 <= optionMax && optionMax != 1) || optionMax == 0) {
+
+          elem.className += " active";
+
+          addSelectedValToCurrentObj();
+        }
+        else if (currentCount <= optionMax && optionMax == 1) {
+          deactivateOtherObjects();
+
+          elem.className += " active";
+          currentObj['form-elements'][currentObjIndex]['selectedVals'] = [];
+          addSelectedValToCurrentObj();
+
+          if (currentObj['form-elements'][a]['']) {
+            newHtml = "<form>";
+            for (var a = 0; a < currentObj['form-elements'][currentObjIndex]['form-elements'].length; a++) {
+              newHtml += createFormItemHtml(obj['form-elements'][a], null);
+            }
+            newHtml += "</form>";
+          }
+        }
+      }
+
+      for (var a = 0; a < currentObj['form-elements'].length; a++) {
+        if (currentObj['form-elements'][a]['label'] == parentLabel) {
+          currentObjIndex = a;
+          currentCount = currentObj['form-elements'][a]['selectedVals'].length;
+          processSelectedVal();
+        }
+      }
+
+      console.log(overallObj);
     }
 	  
 	  function selectService (service, masterServiceArray) {
@@ -300,6 +417,7 @@
         masterServiceArrayString = currentService;
         servicesObj[currentService].active = true;
         currentObj = servicesObj[currentService];
+        overallObj[currentService] = currentObj;
         console.log(currentObj);
         createIconsAndFormElemsFromOptions(servicesObj[currentService], masterServiceArrayString);
       }
@@ -308,6 +426,7 @@
         console.log(masterServiceArrayString);
         currentObj = currentObj["sub-options"][currentService];
         currentObj.active = true;
+        overallObj[currentService] = currentObj;
         console.log(currentObj);
 
         createIconsAndFormElemsFromOptions(currentObj, masterServiceArrayString);
