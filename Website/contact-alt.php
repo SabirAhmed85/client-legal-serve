@@ -63,15 +63,18 @@
                     <p>Email: info@legalservebedford.co.uk</p>
                 </div>
             </form>
+            <!--
             <div class="mynyte-listings mynyte-offers-feed mn-dark" style="height: 400px; display: none;"></div>
             <a class="mynyte-table-book mynyte-book" style="display: none;"></a>
             <a class="mynyte-event-entry-book mynyte-book mn-dark" style="display: none;"></a>
             <div class="mynyte-live-chat mn-dark" style="height: 400px; width: 400px; display: none;"></div>
             <!--<div class="mynyte-table-booking mn-dark" style="height: 600px; width: 400px; display: none;"></div>-->
-            <div class="mynyte-menu-display mn-dark" style="width: 800px; display: none;"></div>
+            <div class="mynyte-menu-display mn-light" style="width: 800px; display: none;"></div>
+            <!--
             <div data-item-type="Appointment Booking" data-item-extra-filters="'Related Business Entity Item Appointment Type':='Process Serving Job'" data-item-sub-type="Appointment Type,Process Serving Job" class="mynyte-new-business-item mn-dark" style="width: 800px; display: none;"></div>
             <div data-item-type="Business User Account" data-item-sub-type="Appointment Type,Process Serving Job" class="mynyte-business-items-summary mn-dark" style="width: 800px; display: none;"></div>
             <div data-item-id="127" class="mynyte-business-item-detail mn-dark" style="width: 800px; display: none;"></div>
+            -->
         </div>
     </div>
 
@@ -99,15 +102,12 @@
 
     </script>
     <script>
-        var script = document.createElement('script');
-        var _businessId = 1;
-        script.src = "https://www.mynyte.co.uk/js/api/externalApi.js?" + _businessId;
-        script.onload = function () {
-            //do stuff with the script
-            console.log( "ext Script loaded" );
-        };
 
-        document.head.appendChild(script); //or something of the likes
+        var mynyte_business_id = 114;
+        var current_mynyte_env = 'staging';
+        var script = document.createElement('script');var current_env = (typeof(current_mynyte_env) !== 'undefined') ? current_mynyte_env+'/': 'staging/';var mynyte_db_environment = "live";
+
+        script.src = "https://www.mynyte.co.uk/"+current_env+"js/api/externalApi.js";script.onload = function () {MynyteApi.createFeed({'elem':$('.mynyte-menu-display'),'feedType':'menuDisplay','menuType':'carte','menuItemCategoryIdString':'371,372,373,374,376', 'menuItemClickable': true});};document.head.appendChild(script);
     </script>
 
 </html>
