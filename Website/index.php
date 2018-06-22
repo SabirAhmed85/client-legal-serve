@@ -78,6 +78,19 @@
             </div>
             <img src="img/process-serving-in-bedford.jpg" alt="Get Process Serving in Bedfordshire and Buckinghamshire"/>
         </div>
+
+        <div class="main-container-2 main-container">
+            <div class="text full">
+                <h2>Investigations / Accident Investigations</h2>
+                <p>At Legal Serve, we're highly equipped and ready to take on any of your investigation needs. We will attend any location on your behalf, be it a private home or public organisation, for taking statements or conducting investigations. As well as this, in meeting your specific requirements we are also able to conduct interviews with potential witnesses.</p>
+                
+                <p>We've been able to provide our investigation services to aid insurance companies and legal firms in their investigations, as well as other private firms requiring information.</p>
+
+                <p>Our services also include people-tracking where it is specifically required.</p>
+                <a href="process-server-bedford.php">Read more about the types of documents we process...</a>
+            </div>
+        </div>
+
         <div class="main-container-2 main-container">
             <img src="img/legal-courier-bedford.jpg" alt="Legal Courier Services in Bedford"/>
             <div class="text">
