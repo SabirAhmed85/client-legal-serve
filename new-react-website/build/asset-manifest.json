@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e27a0726.chunk.css",
+    "main.js": "/static/js/main.a8da421b.chunk.js",
+    "main.js.map": "/static/js/main.a8da421b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9be6d8ef.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9be6d8ef.js.map",
+    "static/js/2.cfd514b4.chunk.js": "/static/js/2.cfd514b4.chunk.js",
+    "static/js/2.cfd514b4.chunk.js.map": "/static/js/2.cfd514b4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0ff64b11db1179bbbc6329c6de9d2bd4.js": "/precache-manifest.0ff64b11db1179bbbc6329c6de9d2bd4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e27a0726.chunk.css.map": "/static/css/main.e27a0726.chunk.css.map",
+    "static/js/2.cfd514b4.chunk.js.LICENSE.txt": "/static/js/2.cfd514b4.chunk.js.LICENSE.txt",
+    "static/media/ReactSeoLogo.svg": "/static/media/ReactSeoLogo.75ac7406.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9be6d8ef.js",
+    "static/js/2.cfd514b4.chunk.js",
+    "static/css/main.e27a0726.chunk.css",
+    "static/js/main.a8da421b.chunk.js"
+  ]
+}

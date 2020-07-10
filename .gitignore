@@ -1,5 +1,9 @@
 _notes/
 
+node_modules/
+*.code-workspace
+*/.vscode/
+
 # OS generated files #
 ######################
 .DS_Store

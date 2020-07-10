@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
-import { FeatureList } from './components';
+import { ServiceList } from './components';
 import { MetaInfo } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FeatureInfoConfig, FeatureInfo } from '../../config/features.config';
+import { ServiceInfoConfig, ServiceInfo } from '../../config/services.config';
 
 const Home: React.FC = () => {
-  const featureList = useMemo<FeatureInfo[]>(() => {
-    return Object.keys(FeatureInfoConfig).map((key) => FeatureInfoConfig[key]);
+  const serviceList = useMemo<ServiceInfo[]>(() => {
+    return Object.keys(ServiceInfoConfig).map((key) => ServiceInfoConfig[key]);
   }, []);
 
   return (
@@ -17,16 +17,11 @@ const Home: React.FC = () => {
         <div className='hero-body'>
           <div className='container has-text-centered'>
             <div className='is-flex is-horizontal-center'>
-              <figure className='image is-158x158'>
-                <FontAwesomeIcon
-                  icon={['fab', 'react']}
-                  className='react-svg spinClockwise-animation'
-                />
-              </figure>
+              <iframe title="Process Serving Information Video" width="560" height="315" src="https://www.youtube.com/embed/vHvd6HaPq_s" frameBorder="0" allowFullScreen></iframe>
             </div>
-            <h1 className='title blog-title'>SEO Friendly SPA</h1>
+            <h1 className='title blog-title'>Welcome to Legal Serve, local Process Servers and Legal Couriers in Bedfordshire &amp; Buckinghamshire.</h1>
             <hr />
-            <FeatureList featureList={featureList} />
+            <ServiceList serviceList={serviceList} />
           </div>
         </div>
       </section>

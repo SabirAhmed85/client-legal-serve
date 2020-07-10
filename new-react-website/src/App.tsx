@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from './Layout';
 import { NotFound } from './components';
-import { Home, About } from './containers';
+import { Home, Services } from './containers';
 import { withTracker } from './withTracker';
 import { Route, Switch } from 'react-router-dom';
 import { RoutesConfig } from './config/routes.config';
@@ -15,9 +15,9 @@ const App: React.FC = () => (
         exact={RoutesConfig.Home.exact}
       />
       <Route
-        path={RoutesConfig.About.path}
-        component={withTracker(About)}
-        exact={RoutesConfig.About.exact}
+        path={RoutesConfig.Services.path}
+        component={withTracker(Services)}
+        exact={RoutesConfig.Services.exact}
       />
       <Route component={NotFound} />
     </Switch>

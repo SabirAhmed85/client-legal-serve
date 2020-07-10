@@ -1,5 +1,5 @@
-import FeatureList from './FeatureList';
+import ServiceList from './ServiceList';
 
 export {
-  FeatureList
+  ServiceList
 };

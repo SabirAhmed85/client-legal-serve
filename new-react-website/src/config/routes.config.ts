@@ -20,10 +20,33 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
     activeClassName: 'is-active',
     icon: 'home',
     metaInfo: {
-      title: 'Home | ReactSeoFriendlySpaTemplate',
-      description: 'Home page description - limit of 160 characters (try for 150-155).'
+      title: 'Process Server Bedford &amp; London | Legal Serve',
+      description: 'Bedfordshire, Buckinghamshire &amp; London-based process server, legal courier &amp; legal document server.'
     }
   },
+  Services: {
+    path: '/our-services',
+    exact: true,
+    displayName: 'Services',
+    activeClassName: 'is-active',
+    icon: 'info',
+    metaInfo: {
+      title: 'Our Services | Process Serving, Legal Courier Services',
+      description: 'Process Serving &amp; Legal Courier Services in London, Bedfordshire &amp; Buckinghamshire'
+    }
+  },
+  Contact: {
+    path: '/contact',
+    exact: true,
+    displayName: 'Contact',
+    activeClassName: 'is-active',
+    icon: 'info',
+    metaInfo: {
+      title: 'Process Serving Enquiries | Contact Legal Serve Bedford',
+      description: 'Enquire about your next Process Server.'
+    }
+  }
+  /*,
   About: {
     path: '/about',
     exact: true,
@@ -34,5 +57,5 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
       title: 'About | ReactSeoFriendlySpaTemplate',
       description: 'About page description - limit of 160 characters (try for 150-155).'
     }
-  }
+  }*/
 });

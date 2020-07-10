@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { RoutesConfig } from '../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ReactSeoLogoSvg = require('../assets/img/ReactSeoLogo.svg') as string;
+const MainLogo = require('../assets/img/logo.png');
 
 const NavBar: React.FC = () => (
   <nav
@@ -13,11 +13,9 @@ const NavBar: React.FC = () => (
   >
     <div className='navbar-wrapper'>
       <div className='brand-wrapper'>
-        <img
-          width='170'
-          src={ReactSeoLogoSvg}
-          alt='react-seo-template'
-        />
+        <img width='170'
+          src={MainLogo}
+          alt='Legal Serve - Process Server in Bedfordshire &amp; Buckinghamshire'/>
       </div>
       <div className='navbar-routes'>
         <NavLink
@@ -30,11 +28,11 @@ const NavBar: React.FC = () => (
         </NavLink>
         <NavLink
           className='navbar-item'
-          to={RoutesConfig.About.path}
-          exact={RoutesConfig.About.exact}
-          activeClassName={RoutesConfig.About.activeClassName}
+          to={RoutesConfig.Services.path}
+          exact={RoutesConfig.Services.exact}
+          activeClassName={RoutesConfig.Services.activeClassName}
         >
-          <span>{RoutesConfig.About.displayName}</span>
+          <span>{RoutesConfig.Services.displayName}</span>
         </NavLink>
         <div className='seperator' />
         <a

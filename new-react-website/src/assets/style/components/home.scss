@@ -54,7 +54,7 @@
       font-size: 3em;
       font-family: Segoe Script;
       letter-spacing: 0.015em;
-      padding-bottom: 1.5rem;
+      padding: 1.5rem 0;
       margin: auto;
 
       @include renderMobileTitleText {
