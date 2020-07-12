@@ -6,6 +6,11 @@
 
     svg {
       color: $color-blue-highlight;
+      margin-right: 1rem;
+    }
+
+    iframe {
+      max-width: 100%;
     }
 
     .container {
@@ -29,11 +34,11 @@
       font-size: 1.1em;
 
       &:first-of-type {
-        margin-top: -0.025rem;
+        margin-top: 1rem;
       }
 
       &:not(:last-child) {
-        margin-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
       }
 
       @include centerStackedColumnContent {
@@ -52,7 +57,7 @@
 
     &.blog-title {
       font-size: 3em;
-      font-family: Segoe Script;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       letter-spacing: 0.015em;
       padding: 1.5rem 0;
       margin: auto;
@@ -64,9 +69,13 @@
   }
 }
 
+.card {
+  background-color: #fcfcfc;
+  border: 1px solid #eae8e8;
+}
+
 .dashboard-content {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0.4rem;
 
   code {
     background-color: rgba(97, 218, 251, 0.25);
@@ -74,18 +83,26 @@
   }
 
   hr {
-    background-color: hsla(0,100%,0%,.125);
-    margin: 0.5rem 0;
+    background-color: hsla(0,100%,0%,.05);
+    margin: 0.5rem 0 1rem 0;
     height: 1px;
   }
 
   > .columns {
     > .column {
-      padding: 2rem !important;
+      padding: 1rem !important;
 
       > .title {
         color: #6d6d6d;
         font-weight: 600;
+
+          &.large-title {
+            font-size: 2rem;
+          }
+
+          &.small-title {
+            font-size: 1.6rem;
+          }
       }
     }
     
@@ -94,5 +111,12 @@
         display: none;
       }
     }
+  }
+}
+
+.our-promise {
+  svg {
+    color: #3273dc;
+    margin-right: 10px; 
   }
 }

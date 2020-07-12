@@ -12,10 +12,11 @@ const NavBar: React.FC = () => (
     aria-label='main navigation'
   >
     <div className='navbar-wrapper'>
-      <div className='brand-wrapper'>
+      <div className='brand-wrapper level'>
         <img width='170'
           src={MainLogo}
           alt='Legal Serve - Process Server in Bedfordshire &amp; Buckinghamshire'/>
+        <span className='level-right'>07853 166 674</span>
       </div>
       <div className='navbar-routes'>
         <NavLink
@@ -26,6 +27,7 @@ const NavBar: React.FC = () => (
         >
           <span>{RoutesConfig.Home.displayName}</span>
         </NavLink>
+        <div className='seperator' />
         <NavLink
           className='navbar-item'
           to={RoutesConfig.Services.path}
@@ -35,10 +37,19 @@ const NavBar: React.FC = () => (
           <span>{RoutesConfig.Services.displayName}</span>
         </NavLink>
         <div className='seperator' />
+        <NavLink
+          className='navbar-item'
+          to={RoutesConfig.Contact.path}
+          exact={RoutesConfig.Contact.exact}
+          activeClassName={RoutesConfig.Contact.activeClassName}
+        >
+          <span>{RoutesConfig.Contact.displayName}</span>
+        </NavLink>
+        <div className='seperator last-seperator' />
         <a
           target='_blank'
           aria-label='GitHub'
-          className='navbar-item'
+          className='navbar-item is-hidden-mobile'
           rel='noopener noreferrer'
           href='https://github.com/based-ghost'
         >

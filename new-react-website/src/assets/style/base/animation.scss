@@ -11,6 +11,10 @@
   animation: pageEnterSlideDown 0.35s cubic-bezier(0.4, 0, 0, 1.5) both;
 }
 
+.fadeIn-animation {
+  animation: fadeIn 0.35s;
+}
+
 @keyframes spinClockwise {
   from {
     transform: rotate(0deg);
@@ -51,5 +55,14 @@
   }
   to {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

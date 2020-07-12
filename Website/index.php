@@ -120,8 +120,8 @@
 
         <div class="main-container-3 main-container">
             <div class="text">
-                <h2>Court Orders served locally in Bedford &amp; Buckingham</h2>
-                <p>We provide a service covering every town and village in Bedfordshire &amp; Buckinghamshire.</p>
+                <h2>Court Orders served locally in London, Bedford &amp; Buckingham</h2>
+                <p>We provide a service covering all parts of London and every town and village in Bedfordshire &amp; Buckinghamshire.</p>
                 <a href="process-server-bedford.php">Find out about our Local Knowledge &amp; Awareness...</a>
             </div>
             <img src="img/local-knowledge-bedford.jpg" alt="Local Process Serving in Bedford and Buckinghamshire done with local knowledge" />

@@ -1,6 +1,5 @@
 export type ServiceInfo = {
   readonly description: string;
-  readonly packageName?: string;
 };
 
 export const ServiceInfoConfig = Object.freeze<Record<string, ServiceInfo>>({
@@ -8,7 +7,7 @@ export const ServiceInfoConfig = Object.freeze<Record<string, ServiceInfo>>({
     description: 'Professionaly handled and timely Process Serving'
   },
   legalCourier: {
-    description: 'Legal courier services that are flexible &amp; accommodating'
+    description: 'Legal courier services that are flexible & accommodating'
   },
   privacy: {
     description: 'Guaranteed privacy and confidentiality'

@@ -1,5 +1,5 @@
-import About from './About';
+import ContactLegalServe from './Contact-legal-serve';
 
 export {
-  About
+  ContactLegalServe
 };

@@ -1,117 +1,116 @@
-import React, { useMemo } from 'react';
-import { ServiceList } from './components';
+import React from 'react';
 import { MetaInfo } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ServiceInfoConfig, ServiceInfo } from '../../config/services.config';
+import Hero from '../../components/Hero'; 
+import OurPromise from '../../components/OurPromise';
 
-const Home: React.FC = () => {
-  const serviceList = useMemo<ServiceInfo[]>(() => {
-    return Object.keys(ServiceInfoConfig).map((key) => ServiceInfoConfig[key]);
-  }, []);
+import OurServicesImg from '../../assets/img/court-order-serving-bedford.png';
+import ProcessServerImg from '../../assets/img/process-serving-in-bedford.jpg';
+import LegalCourierImg from '../../assets/img/legal-courier-bedford.jpg';
+import LocalKnowledgeImg from '../../assets/img/local-knowledge-bedford.jpg';
 
-  return (
-    <div className='view-wrapper'>
-      <MetaInfo {...RoutesConfig.Home.metaInfo} />
-      <section className='hero is-dark'>
-        <div className='hero-body'>
-          <div className='container has-text-centered'>
-            <div className='is-flex is-horizontal-center'>
-              <iframe title="Process Serving Information Video" width="560" height="315" src="https://www.youtube.com/embed/vHvd6HaPq_s" frameBorder="0" allowFullScreen></iframe>
+const Home: React.FC = () => (
+  <div className='view-wrapper'>
+    <MetaInfo {...RoutesConfig.Home.metaInfo} />
+    <Hero item='Home' />
+    <section className='container dashboard-content'>
+      <div className='columns'>
+        <div className='column'>
+          <h2 className='title'>Our Services</h2>
+          <div className='content'>
+            <div className='columns'>
+              <div className='column is-three-quarters'>
+                <p>We offer effective process server and legal support services to our clients, which include solicitors, lawyers, government departments &amp; many others in London, Bedfordshire, Buckinghamshire &amp; surrounding regions.</p>
+                <p>Areas we Cover:</p>
+                <ul>
+                  <li>London</li>
+                  <li>Bedfordshire</li>
+                  <li>Buckinghamshire</li>
+                  <li>Surrounding Boroughs / Regions</li>
+                </ul>
+                <a href="process-server-bedford.php"><strong>Get full details of the kinds of clients we service...</strong></a>
+              </div>
+              <div className='column is-one-quarter has-text-centered'>
+                <img src={OurServicesImg} className='float-right' alt='Legal Support Services, including Court Order serving'/>
+              </div>
             </div>
-            <h1 className='title blog-title'>Welcome to Legal Serve, local Process Servers and Legal Couriers in Bedfordshire &amp; Buckinghamshire.</h1>
-            <hr />
-            <ServiceList serviceList={serviceList} />
           </div>
         </div>
-      </section>
-      <section className='container dashboard-content'>
-        <div className='columns'>
-          <div className='column'>
-            <p className='title'>react-helmet</p>
-            <div className='content'>
-              <p>
-                <code>react-helmet</code> is a React plugin that allows you to
-                manage your app's meta information, much like vue-meta does for
-                Vue (vue-meta is based on react-helmet). It makes use of a
-                reusable component that takes plain HTML tags and outputs plan
-                HTML tags.
-              </p>
-              <p>
-                These properties, when set on a deeply nested component, will
-                cleverly overwrite their parent components' meta tag information,
-                thereby enabling custom info for each top-level view as well as
-                coupling meta info directly to deeply nested subcomponents for
-                more maintainable code.
-              </p>
+      </div>
+      <hr />
+      <div className='columns'>
+        <div className='column'>
+          <div className='card'>
+            <div className='card-image'>
+              <figure className='image is4by3'>
+                <img src={ProcessServerImg} alt='Get Process Serving in Bedfordshire and Buckinghamshire'/>
+              </figure>
             </div>
-          </div>
-          <hr />
-          <div className='column'>
-            <p className='title'>react-ga</p>
-            <div className='content'>
-              <p>
-                <code>react-ga</code> is a JavaScript module that can be used to
-                include Google Analytics tracking code in a website or app that
-                uses React for its front-end codebase. It does not currently use
-                any React code internally, but has been written for use with a
-                number of Mozilla Foundation websites that are using React, as a
-                way to standardize our GA Instrumentation across projects.
-              </p>
-              <p>
-                It is designed to work with the latest version of Google
-                Analytics, Universal Analytics. At this point, all Google
-                Analytics projects are being upgraded to Universal Analytics, so
-                this module will not support the older ga.js implementation.
-              </p>
-            </div>
-          </div>
-          <hr />
-          <div className='column'>
-            <p className='title'>react-snapshot</p>
-            <div className='content'>
-              <p>
-                <code>react-snapshot</code> is a zero-configuration static
-                pre-renderer for React apps. Starting by targeting Create React
-                App (because it's great)
-              </p>
-              <p>
-                Prerendering differs from (SSR) Server Side Rendering. You can get
-                almost all the advantages of it (without the disadvantages) by
-                using prerendering. Prerendering is basically firing up a headless
-                browser, loading your app's routes, and saving the results to a
-                static HTML file. You can then serve it with whatever
-                static-file-serving solution you were using previously. It just
-                works with HTML5 navigation and the likes.
-              </p>
+            <div className='card-content'>
+              <h3 className='title large-title'>Local Process Server Bedford</h3>
+              <div className='content'>
+                <p>Our process servers are available to serve all types of Court Orders and legal documents - and we do this in the most secure and professional way possible.</p>
+                <p>Click the link below to get a more extensive list of our Process Serving services, which we offer throughout London, Bedford, Buckinghamshire &amp; surrounding areas.</p>
+                <a href="process-server-bedford.php"><strong>Read more about the types of documents we process...</strong></a>
+              </div>
             </div>
           </div>
         </div>
         <hr />
-        <div className='columns'>
-          <div className='column'>
-            <p className='title'>Lorem Ipsum</p>
-            <div className='content'>
-              Lorem ipsum dolor sit amet, alia appareat usu id, has legere facilis
-              in. Nam inani malorum epicuri id, illud eleifend reformidans nec cu.
-              Stet meis rebum quo an, ad recusabo praesent reprimique duo, ne
-              delectus expetendis philosophia nam. Mel lorem recusabo ex, vim
-              congue facilisis eu, id vix oblique mentitum. Vide aeterno duo ei.
-              Qui ne urbanitas conceptam deseruisse, commune philosophia eos no.
-              Id ullum reprimique qui, vix ei malorum assueverit contentiones. Nec
-              facilis dignissim efficiantur ad, tantas tempor nam in. Per feugait
-              atomorum ut. Novum appareat ei usu, an usu omnium concludaturque. Et
-              nam latine mentitum, impedit explicari ullamcorper ut est, vis ipsum
-              viderer ei. Porro essent eu per, ut tantas dissentias vim. Dicant
-              regione argumentum vis id, adipisci accusata postulant at vix.
-              Adipisci vituperata ea duo, eu summo detracto mei, et per option
-              periculis. Eos laudem vivendo ex.
+        <div className='column'>
+          <div className='card'>
+            <div className='card-image'>
+              <figure className='image is4by3'>
+                <img src={LegalCourierImg} alt='Legal Courier Services in London, Bedford & Buckinghamshire'/>
+              </figure>
+            </div>
+            <div className='card-content'>
+              <h3 className='title large-title'>Legal Courier</h3>
+              <div className='content'>
+                <p>We also offer a range of Legal Courier services to our clients, with a keen focus on Data Protection legislation and best practise at all times.</p>
+                <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
+                <a href="legal-courier-bedford.php"><strong>Get more details of the Legal Courier services we offer...</strong></a>  
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  );
-};
+        <div className='column'>
+          <div className='card'>
+            <div className='card-image'>
+              <figure className='image is4by3'>
+                <img src={LocalKnowledgeImg} alt='Local Process Serving in Bedford and Buckinghamshire done with local knowledge'/>
+              </figure>
+            </div>
+            <div className='card-content'>
+              <h4 className='title small-title'>Court Orders served Locally in London, Bedford &amp; Buckingham</h4>
+              <div className='content'>
+                <p>We provide a service covering all parts of London and every town and village Bedfordshire &amp; Buckinghamshire. Our local knowledge serves us well, and can often prove to be the key to a successful serving or delivery.</p>
+                <a href="process-server-bedford.php"><strong>Find out about our Local Knowledge &amp; Awareness...</strong></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div className='columns'>
+        <div className='column'>
+          <h4 className='title small-title'>Same Day Pick-up, Delivery &amp; Completion</h4>
+          <div className='content'>
+            <p>We pride ourselves on providing a prompt and efficient service at all times, and in line with this our process servers &amp; legal couriers always offer same-day delivery &amp; completion of service to our clients.</p>
+            <a href="process-server-bedford.php"><strong>A high-quality & efficient service...</strong></a>
+          </div>
+        </div>
+        <div className='column'>
+          <h4 className='title small-title'>Data Protection Compliance</h4>
+          <div className='content'>
+            <p>As a company with reputable clients in Bedford, Buckinghamshire and London - clients who range from government bodies to Law Firms - our process servers &amp; couriers pride themselves on their professional integrity, particularly when it comes to Data Compliance.</p>
+            <a href="legal-courier-bedford.php#data-compliance"><strong>Our commitment to Data Protection...</strong></a>
+          </div>
+        </div>
+      </div>
+      <OurPromise />
+    </section>
+  </div>
+);
 
 export default Home;

@@ -8,11 +8,10 @@ type ServiceListProps = {
 
 const ServiceList = React.memo<ServiceListProps>(({ serviceList }) => (
   <Fragment>
-    {serviceList.map(({ packageName, description }: ServiceInfo, index: number) => (
+    {serviceList.map(({ description }: ServiceInfo, index: number) => (
         <h2 key={index} className='subtitle'>
           <FontAwesomeIcon icon='check' />
           {` ${description} `}
-          {packageName && <code>{packageName}</code>}
         </h2>
       )
     )}
