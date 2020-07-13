@@ -5,6 +5,9 @@ import NotFound from './NotFound';
 import BackToTop from './BackToTop';
 import Hero from './Hero';
 import OurPromise from './OurPromise';
+import OurClients from './OurClients';
+import MainContactForm from './MainContactForm';
+import InlineContactPanel from './InlineContactPanel';
 
 export {
   Footer,
@@ -13,5 +16,8 @@ export {
   NotFound,
   BackToTop,
   Hero,
-  OurPromise
+  OurPromise,
+  OurClients,
+  MainContactForm,
+  InlineContactPanel
 };

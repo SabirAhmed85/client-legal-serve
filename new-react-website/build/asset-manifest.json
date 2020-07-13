@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.e27a0726.chunk.css",
-    "main.js": "/static/js/main.a8da421b.chunk.js",
-    "main.js.map": "/static/js/main.a8da421b.chunk.js.map",
+    "main.css": "/static/css/main.1c966ccc.chunk.css",
+    "main.js": "/static/js/main.d02486fa.chunk.js",
+    "main.js.map": "/static/js/main.d02486fa.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9be6d8ef.js",
     "runtime-main.js.map": "/static/js/runtime-main.9be6d8ef.js.map",
-    "static/js/2.cfd514b4.chunk.js": "/static/js/2.cfd514b4.chunk.js",
-    "static/js/2.cfd514b4.chunk.js.map": "/static/js/2.cfd514b4.chunk.js.map",
+    "static/js/2.4f8d92ad.chunk.js": "/static/js/2.4f8d92ad.chunk.js",
+    "static/js/2.4f8d92ad.chunk.js.map": "/static/js/2.4f8d92ad.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0ff64b11db1179bbbc6329c6de9d2bd4.js": "/precache-manifest.0ff64b11db1179bbbc6329c6de9d2bd4.js",
+    "precache-manifest.e3d706e5d7af5f431c1846a6f09c0697.js": "/precache-manifest.e3d706e5d7af5f431c1846a6f09c0697.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.e27a0726.chunk.css.map": "/static/css/main.e27a0726.chunk.css.map",
-    "static/js/2.cfd514b4.chunk.js.LICENSE.txt": "/static/js/2.cfd514b4.chunk.js.LICENSE.txt",
-    "static/media/ReactSeoLogo.svg": "/static/media/ReactSeoLogo.75ac7406.svg"
+    "static/css/main.1c966ccc.chunk.css.map": "/static/css/main.1c966ccc.chunk.css.map",
+    "static/js/2.4f8d92ad.chunk.js.LICENSE.txt": "/static/js/2.4f8d92ad.chunk.js.LICENSE.txt",
+    "static/media/Kennedys-law-solicitors-cambridge-and-london-client-logo.jpg": "/static/media/Kennedys-law-solicitors-cambridge-and-london-client-logo.08c59d7e.jpg",
+    "static/media/bedford-borough-council-client-logo.png": "/static/media/bedford-borough-council-client-logo.9eeaa30f.png",
+    "static/media/bolton-council-client-logo.jpg": "/static/media/bolton-council-client-logo.88bd9031.jpg",
+    "static/media/cambridge-family-law-practise-client-logo.png": "/static/media/cambridge-family-law-practise-client-logo.6ecb25b9.png",
+    "static/media/court-order-serving-bedford.png": "/static/media/court-order-serving-bedford.590e1cae.png",
+    "static/media/fullers-solicitors-bedford-client-logo.png": "/static/media/fullers-solicitors-bedford-client-logo.da7c53b7.png",
+    "static/media/legal-courier-bedford.jpg": "/static/media/legal-courier-bedford.c28b7bdd.jpg",
+    "static/media/local-knowledge-bedford.jpg": "/static/media/local-knowledge-bedford.795c3017.jpg",
+    "static/media/logo.png": "/static/media/logo.7500c5b6.png",
+    "static/media/powys-county-council-wales-client-logo.png": "/static/media/powys-county-council-wales-client-logo.8fa9d1e9.png",
+    "static/media/process-serving-in-bedford.jpg": "/static/media/process-serving-in-bedford.a5061fcd.jpg",
+    "static/media/ray-borley-dunkley-llp-milton-keynes-client-logo.jpg": "/static/media/ray-borley-dunkley-llp-milton-keynes-client-logo.328a1360.jpg",
+    "static/media/watsons-solicitors-warrington-client-logo.jpg": "/static/media/watsons-solicitors-warrington-client-logo.9b0639c5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9be6d8ef.js",
-    "static/js/2.cfd514b4.chunk.js",
-    "static/css/main.e27a0726.chunk.css",
-    "static/js/main.a8da421b.chunk.js"
+    "static/js/2.4f8d92ad.chunk.js",
+    "static/css/main.1c966ccc.chunk.css",
+    "static/js/main.d02486fa.chunk.js"
   ]
 }

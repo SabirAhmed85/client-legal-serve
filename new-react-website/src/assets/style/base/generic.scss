@@ -128,3 +128,14 @@ code {
     }
   }
 }
+
+.card {
+  &.card-dark {
+    background-color: $color-hero-is-dark;
+    color: $color-hero-is-dark;
+
+    .title {
+      color: #fff;
+    }
+  }
+}

@@ -1,11 +1,10 @@
 import React from 'react';
-import { MetaInfo, OurPromise } from '../../components';
+import { MetaInfo, OurPromise, InlineContactPanel, OurClients } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
 import Hero from '../../components/Hero';
 
 import ProcessServerImg from '../../assets/img/process-serving-in-bedford.jpg';
 import LegalCourierImg from '../../assets/img/legal-courier-bedford.jpg';
-import OurClients from '../../components/OurClients';
 
 const Services: React.FC = () => (
   <section className='view-wrapper'>
@@ -52,6 +51,7 @@ const Services: React.FC = () => (
       <hr />
       <OurClients />
       <OurPromise />
+      <InlineContactPanel />
     </section>
   </section>
 );
