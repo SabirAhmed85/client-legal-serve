@@ -1,0 +1,259 @@
+#shopping-cart table {
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+#shopping-cart table td {
+    background-color: #FFFFFF;
+}
+
+.txt-heading {
+    color: #ded2d2;
+    margin-top: 25px;
+}
+
+#btnEmpty {
+    background-color: #ffffff;
+    border: #d00000 1px solid;
+    padding: 5px 10px;
+    color: #d00000;
+    float: right;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 10px 0px;
+}
+
+.btnAddAction {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #efefef;
+    border: #E0E0E0 1px solid;
+    color: #211a1a;
+    float: right;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.btnAddAction.active {
+    color: #9c5050;
+}
+
+#products-grid .txt-heading {
+    margin-bottom: 18px;
+}
+
+.product-item {
+    float: none;
+    background: #e8e7e7;
+    border: #ffffff 1px solid;
+    color: #666;
+    margin: 0 auto;
+}
+
+.clear-float {
+    clear: both;
+}
+
+.demo-input-box {
+    border-radius: 2px;
+    border: #CCC 1px solid;
+    padding: 2px 1px;
+}
+
+.tbl-cart {
+    font-size: 0.9em;
+}
+
+.tbl-cart th {
+    font-weight: normal;
+}
+
+#products-grid #products-header,
+#products-grid #products-bottom-header {
+    position: relative;
+}
+
+#products-grid #products-header {
+    margin-bottom: 25px;
+}
+
+#products-grid #products-header h2 {
+    font-size: 1.5rem;
+    padding: 15px 0 10px;
+    color: #ddd;
+    border-bottom: 1px dotted #582828;
+}
+
+#products-grid #products-header p {
+    color: #dec3c3;
+}
+
+#products-grid #products-header p.pager-note {
+    color: #aaa;
+}
+
+#products-grid .products-pager {
+    position: absolute;
+    top: 23px;
+    right: 0;
+}
+
+.products-pager span,
+.products-pager a,
+.products-pager select {
+    float: left;
+    margin-right: 15px;
+}
+
+.products-pager span {
+    color: #aaa;
+}
+
+.products-pager a i {
+    font-size: 11px;
+    margin-top: 1px;
+}
+
+.products-pager select {
+    padding: 5px;
+    margin-top: -10px;
+    border-radius: 4px;
+    background: #ccc;
+}
+
+#products-bottom-header {
+    border-top: 1px dotted #582828;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+#products-bottom-header p {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.product-tile a {
+    color: #444;
+}
+
+.product-tile a:hover {
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-title {
+    margin-bottom: 20px;
+}
+
+.product-price {
+    float: left;
+    margin-top: 3px;
+}
+
+#product-grid {
+    float: none;
+    margin: 0 auto;
+}
+
+#product-image-thumbs .image-thumb-container {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#product-main-image img,
+#product-image-thumbs img {
+    width: 100%;
+}
+
+#product-main-image img {
+    border: 3px solid #696969;
+    margin-bottom: 5px;
+}
+
+#product-image-thumbs img {
+    border: 3px solid #737975;
+}
+
+#product-main-image img:hover,
+#product-image-thumbs img:hover {
+    cursor: pointer;
+    border-color: #bfa5a5;
+}
+
+#product-image-thumbs .image-thumb-container:hover img {
+    transform: scale(0.975);
+}
+
+#product-item {
+    background: #161313;
+}
+
+#product-item .product-tile-footer {
+    float: left;
+    width: 100%;
+    margin: 20px 0 5px;
+    color: #ccc;
+    padding: 25px 0 5px;
+    border-top: 1px dotted #333;
+}
+
+
+/* Shared Prod Page components */
+
+button.add-to-wishlist.active {
+    background: #111;
+    color: #fff;
+    border-color: #222;
+}
+
+button.add-to-wishlist.active:hover {
+    background: #141414;
+    color: #fff;
+    border-color: #333;
+}
+
+.modal.product-image .modal-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal.product-image .close {
+    margin-left: 0;
+}
+
+.modal.product-image .modal-body {
+    padding: 0;
+}
+
+.modal.product-image .modal-body img {
+    width: 100%;
+}
+
+.wishlist .book-appointment-btn {
+    margin-top: -10px;
+}
+
+.cart-action {
+    float: right;
+}
+
+.cart-item-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: #E0E0E0 1px solid;
+    padding: 5px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.no-records {
+    text-align: center;
+    clear: both;
+    margin: 38px 0px;
+}
