@@ -8,7 +8,7 @@
     <meta name="description" content="Bedfordshire, Buckinghamshire &amp; London-based process server, legal courier &amp; legal document server."/>
     <meta name="keywords" content="bedford, luton, london, buckinghamshire, process server, legal courier, data protection compliant, process agent, court order server, legal document server, process serving, processing agent, UK, MK40"/>
 
-    <link href="/css/outer-style.css" rel="stylesheet">
+    <link href="css/outer-style.css" rel="stylesheet">
     
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         

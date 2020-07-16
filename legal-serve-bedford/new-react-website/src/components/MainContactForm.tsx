@@ -21,9 +21,10 @@ const getSubmitCallback = () =>
   values => {
     axios({
       method: 'POST',
-      url: 'http://legalservebedford.co.uk/contact-process.php?action=processContact',
+      url: 'http://legalservebedford.co.uk/new/contact-process.php?action=processContact',
       data: JSON.stringify(values)
     }).then((response) => {
+      console.log(response.data);
       if (response.data.status === '\"Success\"'){
         alert("Message Sent.");
       } else {

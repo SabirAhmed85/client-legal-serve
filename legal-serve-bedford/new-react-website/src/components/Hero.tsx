@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import { ServiceList } from '../containers/Home/components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ServiceInfo, ServiceInfoConfig } from '../config/services.config';
 
 export interface HeroProps {
@@ -19,6 +18,10 @@ const Hero = (props: HeroProps) => {
     Contact: {
       title: 'Contact Legal Serve Bedford to arrange your next Serving or Delivery',
       summary: 'Contact Legal Serve to discuss your legal support needs or to better understand our delivery'
+    },
+    Clients: {
+      title: 'Our Clients',
+      summary: 'Ranging from Bedfordshire & Buckinghamshire to Cambridgeshire, our clients trust us to deliver'
     }
   };
   const serviceList = useMemo<ServiceInfo[]>(() => {

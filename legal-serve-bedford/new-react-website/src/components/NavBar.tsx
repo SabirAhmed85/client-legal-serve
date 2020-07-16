@@ -45,17 +45,15 @@ const NavBar: React.FC = () => (
         >
           <span>{RoutesConfig.Contact.displayName}</span>
         </NavLink>
-        <div className='seperator last-seperator' />
-        <a
-          target='_blank'
-          aria-label='GitHub'
-          className='navbar-item is-hidden-mobile'
-          rel='noopener noreferrer'
-          href='https://github.com/based-ghost'
+        <div className='seperator' />
+        <NavLink
+          className='navbar-item'
+          to={RoutesConfig.Clients.path}
+          exact={RoutesConfig.Clients.exact}
+          activeClassName={RoutesConfig.Clients.activeClassName}
         >
-          <span>GitHub</span>
-          <FontAwesomeIcon icon='external-link-alt' />
-        </a>
+          <span>{RoutesConfig.Clients.displayName}</span>
+        </NavLink>
       </div>
     </div>
   </nav>

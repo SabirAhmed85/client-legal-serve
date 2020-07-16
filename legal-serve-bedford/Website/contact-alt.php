@@ -103,11 +103,15 @@
     </script>
     <script>
 
-        var mynyte_business_id = 114;
-        var current_mynyte_env = 'staging';
-        var script = document.createElement('script');var current_env = (typeof(current_mynyte_env) !== 'undefined') ? current_mynyte_env+'/': 'staging/';var mynyte_db_environment = "live";
+        var mynyte_business_id = 90;
 
-        script.src = "https://www.mynyte.co.uk/"+current_env+"js/api/externalApi.js";script.onload = function () {MynyteApi.createFeed({'elem':$('.mynyte-menu-display'),'feedType':'menuDisplay','menuType':'carte','menuItemCategoryIdString':'371,372,373,374,376', 'menuItemClickable': true});};document.head.appendChild(script);
+        var mynyte_db_environment = "localhost";
+        var current_mynyte_env = "localhost";
+        var local_root_prefix = "http://localhost/mynyte-prod";
+
+        var o = function () {MynyteApi.createFeed({'elem':$('.mynyte-menu-display'),'feedType':'menuDisplay','menuType':'carte', 'menuItemClickable': true});};
+        var d=document;var s=d.createElement('script');var c=(typeof(current_mynyte_env) !== 'undefined') ? current_mynyte_env: 'live';var r=(c=='localhost') ? (typeof(local_root_prefix) !== 'undefined') ? local_root_prefix: "http://"+c: "https://www.mynyte.co.uk/";var cu=(c=='localhost')? "": c;
+        s.src = r+cu+"/js/api/externalApi.js";s.onload = function () {console.log("MyNyte API Script loaded");if(typeof(o)!=='undefined'){o();}};d.head.appendChild(s);
     </script>
 
 </html>

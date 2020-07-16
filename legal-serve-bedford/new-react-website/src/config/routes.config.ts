@@ -35,6 +35,17 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
       description: 'Process Serving &amp; Legal Courier Services in London, Bedfordshire &amp; Buckinghamshire'
     }
   },
+    ProcessServerBedford: {
+      path: '/our-services/process-server-bedford',
+      exact: true,
+      displayName: 'Process Server Bedford',
+      activeClassName: 'is-active',
+      icon: 'info',
+      metaInfo: {
+        title: 'Our Services | Process Serving, Legal Courier Services',
+        description: 'Process Serving &amp; Legal Courier Services in London, Bedfordshire &amp; Buckinghamshire'
+      }
+    },
   Contact: {
     path: '/contact',
     exact: true,
@@ -44,6 +55,17 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
     metaInfo: {
       title: 'Process Serving Enquiries | Contact Legal Serve Bedford',
       description: 'Enquire about your next Process Server.'
+    }
+  },
+  Clients: {
+    path: '/clients',
+    exact: true,
+    displayName: 'Our Clients',
+    activeClassName: 'is-active',
+    icon: 'info',
+    metaInfo: {
+      title: 'Our Clients across Bedfordshire, Buckinghamshire & Cambridgeshire | Process Serving, Legal Courier Services',
+      description: 'See our clients, Local Authorities and Legal Practises ranging across Bedfordshire, Buckinghamshire, Cambridgeshire & London'
     }
   }
   /*,
