@@ -42,14 +42,14 @@ const HeaderWrapper = styled.header`
   /* padding: 30px 60px; */
   padding: 20px 60px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
   position: fixed;
   z-index: 99999;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #1f070a;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   &.home {
@@ -90,16 +90,11 @@ const HeaderWrapper = styled.header`
   }
 
   &.sticky {
-    background-color: #333;
+    background-color: #1f070a;
     position: fixed;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    @media (max-width: 1400px) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     .headerSearch {
       display: flex;
@@ -153,7 +148,7 @@ const HeaderWrapper = styled.header`
   .headerSearch {
     input {
       @media (max-width: 1400px) {
-        padding: 0 15px;
+        padding: 0 15px 0 0;
         font-size: 15px;
       }
 
@@ -188,10 +183,9 @@ export const HeaderRightSide = styled.div`
 
   .menu-item {
     a {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Josefin Sans', sans-serif;
       font-size: ${themeGet('fontSizes.2', '15')}px;
-      font-weight: ${themeGet('fontWeights.6', '700')};
-      color: ${themeGet('colors.lightBold', '#ddd')};
+      color: ${themeGet('colors.light', '#af977f')};
       line-height: 1.2em;
       display: block;
       transition: 0.15s ease-in-out;
@@ -241,11 +235,10 @@ export const MainMenu = styled.div`
   .popover-wrapper {
     .popover-content {
       .menu-item {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
         a {
           font-size: 15px;
-          font-weight: 700;
-          color: ${themeGet('colors.lightBold', '#ddd')};
+          color: ${themeGet('colors.light', '#af977f')};
           line-height: 1.2em;
           display: block;
           padding: 15px 30px;
@@ -338,7 +331,7 @@ export const SelectedType = styled.button`
   span {
     display: flex;
     align-items: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: ${themeGet('fontSizes.2', '15')}px;
     font-weight: ${themeGet('fontWeights.6', '700')};
     color: ${themeGet('colors.primary', '#009E7F')};

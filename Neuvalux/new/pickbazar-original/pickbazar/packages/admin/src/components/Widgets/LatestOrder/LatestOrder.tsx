@@ -72,7 +72,7 @@ const StyledBody = withStyle(BaseStyledBody, () => ({
 }));
 
 const StyledHeadCell = withStyle(BaseStyledHeadCell, () => ({
-  fontFamily: "'Lato', sans-serif",
+  fontFamily: "'Josefin Sans', sans-serif",
   fontWeight: 700,
   color: '#161F6A !important',
 }));
@@ -82,7 +82,7 @@ const SmallHeadCell = withStyle(StyledHeadCell, () => ({
 }));
 
 const StyledCell = withStyle(BaseStyledCell, () => ({
-  fontFamily: "'Lato', sans-serif",
+  fontFamily: "'Josefin Sans', sans-serif",
   fontWeight: 400,
   color: '#161F6A !important',
 }));

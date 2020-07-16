@@ -20,8 +20,8 @@ export const SelectedItem = styled.button`
   height: 38px;
   display: flex;
   align-items: center;
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  border: 1px solid ${themeGet('colors.borderColor', '#f1f1f1')};
+  background: none;
+  border: none;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 10px;
@@ -33,10 +33,10 @@ export const SelectedItem = styled.button`
   span {
     display: flex;
     align-items: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: ${themeGet('fontSizes.2', '15')}px;
-    font-weight: ${themeGet('fontWeights.6', '700')};
-    color: ${themeGet('colors.primary', '#009E7F')};
+    font-weight: ${themeGet('fontWeights.4', '400')};
+    color: ${themeGet('colors.af977f', '#af977f')};
     text-decoration: none;
 
     &:first-child {

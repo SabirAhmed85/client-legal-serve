@@ -36,7 +36,7 @@ export const OrderReceivedContainer = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: ${themeGet('fontSizes.2', '15')}px;
     font-weight: ${themeGet('fontWeights.3', '400')};
     color: ${themeGet('colors.darkRegular', '#77798c')};
@@ -92,7 +92,7 @@ export const BlockTitle = styled.h2`
 `;
 
 export const Text = styled.p<TextProps>`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   color: ${themeGet('colors.darkBold', '#0D1136')};
   font-weight: ${(props) => (props.bold ? '700' : '400')};

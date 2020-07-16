@@ -3,6 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 export const SearchWrapper = styled.div`
   width: 100%;
+  max-width: 275px;
   height: 36px;
   display: flex;
   align-items: center;

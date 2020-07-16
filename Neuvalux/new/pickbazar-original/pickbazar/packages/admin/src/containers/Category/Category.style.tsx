@@ -35,7 +35,7 @@ export const StyledTable = withStyle(BaseStyledTable, () => ({
 }));
 
 export const StyledHeadCell = withStyle(BaseStyledHeadCell, () => ({
-  fontFamily: "'Lato', sans-serif",
+  fontFamily: "'Josefin Sans', sans-serif",
   fontWeight: 700,
   color: '#161F6A !important',
   alignItems: 'center',
@@ -48,14 +48,14 @@ export const StyledHeadCell = withStyle(BaseStyledHeadCell, () => ({
 }));
 
 export const StyledCell = withStyle(BaseStyledCell, () => ({
-  fontFamily: "'Lato', sans-serif",
+  fontFamily: "'Josefin Sans', sans-serif",
   fontWeight: 400,
   color: '#161F6A !important',
   alignSelf: 'center',
 }));
 
 export const StyledHeadCellCenter = withStyle(BaseStyledHeadCell, () => ({
-  fontFamily: "'Lato', sans-serif",
+  fontFamily: "'Josefin Sans', sans-serif",
   fontWeight: 700,
   color: '#161F6A !important',
   alignItems: 'center',
@@ -66,7 +66,7 @@ export const StyledHeadCellCenter = withStyle(BaseStyledHeadCell, () => ({
 }));
 
 export const StyledCellCenter = withStyle(BaseStyledCell, () => ({
-  fontFamily: "'Lato', sans-serif",
+  fontFamily: "'Josefin Sans', sans-serif",
   fontWeight: 400,
   color: '#161F6A !important',
   alignSelf: 'center',

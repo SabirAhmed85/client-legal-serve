@@ -42,7 +42,7 @@ export default class CustomDocument extends Document {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Lato:400,700%7CPoppins:700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700%7COpen+Sans+Condensed:400&display=swap"
             rel="stylesheet"
           />
         </Head>

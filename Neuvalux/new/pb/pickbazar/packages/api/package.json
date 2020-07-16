@@ -1,5 +1,5 @@
 {
-  "name": "@pick-bazar/api",
+  "name": "@neuvalux/api",
   "version": "3.0.2",
   "scripts": {
     "shop-dev": "ts-node-dev --respawn server.shop.ts",

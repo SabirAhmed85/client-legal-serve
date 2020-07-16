@@ -31,7 +31,7 @@ export const Heading = styled.h3`
 
 export const SubHeading = styled.span`
   margin-bottom: 30px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.3', '400')};
   color: ${themeGet('colors.darkRegular', '#77798c')};
@@ -47,7 +47,7 @@ export const OfferSection = styled.div`
   align-items: center;
 `;
 export const Offer = styled.p`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.3', '400')};
   color: ${themeGet('colors.darkRegular', '#77798c')};
@@ -60,7 +60,7 @@ export const Input = styled.input`
   border-radius: 6px;
   background-color: ${themeGet('colors.lightColor', '#F7F7F7')};
   border: 1px solid ${themeGet('colors.lightColor', '#F7F7F7')};
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.3', '400')};
   color: ${themeGet('colors.darkBold', '#0D1136')};

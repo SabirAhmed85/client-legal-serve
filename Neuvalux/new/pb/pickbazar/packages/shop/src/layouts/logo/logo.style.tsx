@@ -6,7 +6,7 @@ export const LogoBox = styled.span(
     fontSize: 26,
     fontWeight: 'bold',
     cursor: 'pointer',
-    mr: [0, 20, 40],
+    mr: [0, 10, 20],
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

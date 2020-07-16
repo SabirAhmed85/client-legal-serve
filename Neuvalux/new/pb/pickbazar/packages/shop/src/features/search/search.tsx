@@ -48,7 +48,7 @@ const Search: React.FC<Props> = ({ onSubmit, ...props }) => {
       name="search"
       placeholder={intl.formatMessage({
         id: 'searchPlaceholder',
-        defaultMessage: 'Search your products from here',
+        defaultMessage: 'Search products',
       })}
       categoryType={query.type}
       buttonText={intl.formatMessage({

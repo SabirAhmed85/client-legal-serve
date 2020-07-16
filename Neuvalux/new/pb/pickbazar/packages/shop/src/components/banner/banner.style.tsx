@@ -41,21 +41,10 @@ export const Content = styled.div(
     zIndex: 2,
   }
 );
-export const Title = styled.h2(
-  css({
-    fontSize: [17, 30, 45],
-    color: 'darkBold',
-  }),
-  {
-    fontWeight: 700,
-    marginBottom: 15,
-    textAlign: 'center',
-  }
-);
 export const Description = styled.p(
   css({
     fontSize: [14, 15, 19],
-    color: 'darkRegular',
+    color: 'lightGrey',
     marginBottom: [null, 60],
     display: ['none', 'block'],
   }),

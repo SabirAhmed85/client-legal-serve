@@ -34,7 +34,7 @@ const PopupItemCount = styled.div`
   color: ${themeGet('colors.primary', '#009E7F')};
 
   span {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: ${themeGet('fontSizes.2', '15')}px;
     font-weight: ${themeGet('fontWeights.6', '700')};
     color: ${themeGet('colors.primary', '#009E7F')};
@@ -121,7 +121,7 @@ const ItemDetails = styled.div`
 `;
 
 const ItemTitle = styled.span`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.3', '400')};
   color: ${themeGet('colors.darkBold', '#0D1136')};
@@ -129,7 +129,7 @@ const ItemTitle = styled.span`
 `;
 
 const ItemPrice = styled.span`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
   color: ${themeGet('colors.primary', '#009E7F')};
@@ -137,14 +137,14 @@ const ItemPrice = styled.span`
 `;
 
 const ItemWeight = styled.span`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.1', '13')}px;
   font-weight: ${themeGet('fontWeights.3', '400')};
   color: ${themeGet('colors.darkRegular', '#77798C')};
 `;
 
 const TotalPrice = styled.span`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
   color: ${themeGet('colors.darkBold', '#0D1136')};
@@ -185,7 +185,7 @@ const PromoCode = styled.span`
     background-color: transparent;
     display: inline-flex;
     cursor: pointer;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: ${themeGet('fontSizes.2', '15')}px;
     font-weight: ${themeGet('fontWeights.6', '700')};
     color: ${themeGet('colors.primary', '#009E7F')};
@@ -234,7 +234,7 @@ const CheckoutButtonWrapper = styled.div`
 `;
 
 const Title = styled.a`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
   color: #ffffff;
@@ -252,7 +252,7 @@ const PriceBox = styled.span`
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
   color: ${themeGet('colors.primary', '#009E7F')};
@@ -264,7 +264,7 @@ const PriceBox = styled.span`
 `;
 
 const NoProductMsg = styled.span`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '14')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
   color: ${themeGet('colors.darkRegular', '#77798C')};
@@ -282,7 +282,7 @@ const CouponBoxWrapper = styled.div`
 `;
 
 const CouponCode = styled.p`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: ${themeGet('colors.darkRegular', '#77798C')};
@@ -299,7 +299,7 @@ const CouponCode = styled.p`
 `;
 
 const ErrorMsg = styled.span`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: ${themeGet('fontSizes.2', '14')}px;
   font-weight: 400;
   color: ${themeGet('colors.secondaryHover', '#FF282F')};

@@ -52,13 +52,14 @@ const Header: React.FC<Props> = ({ className }) => {
   const showSearch = isCategoryPage(type);
   return (
     <HeaderWrapper className={className} id="layout-header">
-      <LeftMenu logo={LogoImage} />
-      {showSearch && <Search minimal={true} className="headerSearch" />}
-      <RightMenu
+      <LeftMenu 
         isAuthenticated={isAuthenticated}
         onJoin={handleJoin}
         onLogout={handleLogout}
-        avatar={UserImage}
+        avatar={UserImage} />
+      {showSearch && <Search minimal={true} maxWidth='275px' className="headerSearch" />}
+      <RightMenu
+        logo={LogoImage}
       />
     </HeaderWrapper>
   );

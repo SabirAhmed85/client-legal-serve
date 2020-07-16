@@ -1,48 +1,37 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
-import NavLink from 'components/nav-link/nav-link';
-import { OFFER_PAGE, HELP_PAGE } from 'constants/navigation';
-import LanguageSwitcher from '../language-switcher/language-switcher';
-import { HelpIcon } from 'assets/icons/HelpIcon';
 import { RightMenuBox } from './right-menu.style';
-const AuthMenu = dynamic(() => import('../auth-menu'), { ssr: false });
+import { FurnitureIcon } from 'assets/icons/FurnitureIcon';
+import { FURNITURE_PAGE } from 'constants/navigation';
+import { useRouter } from 'next/router';
+
+import Logo from 'layouts/logo/logo';
+const MENU_ITEMS = [
+  {
+    link: FURNITURE_PAGE,
+    label: 'Furniture',
+    icon: <FurnitureIcon width="15px" height="13px" />,
+    intlId: 'navFurnitureMenu',
+    dynamic: true,
+  }
+];
 
 type Props = {
-  onLogout: () => void;
-  onJoin: () => void;
-  avatar: string;
-  isAuthenticated: boolean;
+  logo: string;
 };
 
-export const RightMenu: React.FC<Props> = ({
-  onLogout,
-  avatar,
-  isAuthenticated,
-  onJoin,
-}) => {
+export const RightMenu: React.FC<Props> = ({ logo }) => {
+  const router = useRouter();
+  const initialMenu = MENU_ITEMS.find((item) => item.link === router.pathname);
+  const [activeMenu, setActiveMenu] = React.useState(
+    initialMenu ?? MENU_ITEMS[0]
+  );
+
   return (
     <RightMenuBox>
-      <NavLink
-        className="menu-item"
-        href={OFFER_PAGE}
-        label="Offer"
-        intlId="navlinkOffer"
-      />
-      <NavLink
-        className="menu-item"
-        href={HELP_PAGE}
-        label="Need Help"
-        intlId="navlinkHelp"
-        iconClass="menu-icon"
-        icon={<HelpIcon />}
-      />
-      <LanguageSwitcher />
-
-      <AuthMenu
-        avatar={avatar}
-        onJoin={onJoin}
-        onLogout={onLogout}
-        isAuthenticated={isAuthenticated}
+      <Logo
+        imageUrl={logo}
+        alt={'Shop Logo'}
+        onClick={() => setActiveMenu(MENU_ITEMS[0])}
       />
     </RightMenuBox>
   );

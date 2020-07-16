@@ -68,7 +68,7 @@ const BarChart = ({
           style: {
             colors: '#161F6A',
             fontSize: '14px',
-            fontFamily: "'Lato', sans-serif",
+            fontFamily: "'Josefin Sans', sans-serif",
           },
         },
         axisBorder: {
@@ -86,7 +86,7 @@ const BarChart = ({
           style: {
             color: '#161F6A',
             fontSize: '14px',
-            fontFamily: "'Lato', sans-serif",
+            fontFamily: "'Josefin Sans', sans-serif",
           },
         },
       },

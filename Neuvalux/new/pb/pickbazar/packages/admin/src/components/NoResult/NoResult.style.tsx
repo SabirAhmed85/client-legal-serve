@@ -51,7 +51,7 @@ export const Button = styled('button', () => ({
   backgroundColor: '#009e7f',
   height: '50px',
   borderRadius: '3px',
-  fontFamily: `'Lato', sans-serif`,
+  fontFamily: `'Josefin Sans', sans-serif`,
   fontSize: '16px',
   fontWeight: 700,
   textDecoration: 'none',

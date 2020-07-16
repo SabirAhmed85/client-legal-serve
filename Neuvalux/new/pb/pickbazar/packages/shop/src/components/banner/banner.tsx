@@ -4,7 +4,6 @@ import {
   Box,
   Image,
   Content,
-  Title,
   Description,
   SearchWrapper,
 } from './banner.style';
@@ -40,13 +39,6 @@ export const Banner: React.FC<Props> = ({
     <Box>
       <Image backgroundImage={`url(${imageUrl})`} />
       <Content>
-        <Title>
-          <FormattedMessage
-            id={intlTitleId}
-            defaultMessage="Set Your Title Through Language File"
-            values={{ minute: 90 }}
-          />
-        </Title>
         <Description>
           <FormattedMessage
             id={intlDescriptionId}

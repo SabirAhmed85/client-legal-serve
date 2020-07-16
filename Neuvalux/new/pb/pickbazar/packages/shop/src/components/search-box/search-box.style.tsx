@@ -4,12 +4,13 @@ import { shadow } from 'styled-system';
 export const StyledForm = styled.form<any>(
   (props) => ({
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     borderRadius: 6,
     overflow: 'hidden',
     width: props.minimal ? '100%' : 700,
     color: '#99998C',
     backgroundColor: props.minimal ? '#555' : '#333',
+    maxWidth: props.maxWidth ? props.maxWidth : 'none'
   }),
   shadow
 );
@@ -19,7 +20,7 @@ export const StyledInput = styled.input(
     flexGrow: 1,
     fontSize: 15,
     px: 20,
-    height: 48,
+    height: 38,
     color: '#99998C',
     backgroundColor: 'inherit',
   }),
