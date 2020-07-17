@@ -20,9 +20,9 @@ const Services: React.FC = () => (
               </figure>
             </div>
             <div className='card-content'>
-              <h3 className='title large-title'>Local Process Server Bedford</h3>
+              <h3 className='title large-title'>Local Process Server</h3>
               <div className='content'>
-                <p>Our process servers are available to serve all types of Court Orders and legal documents - and we do this in the most secure and professional way possible.</p>
+                <p>Process Serving in Bedfordshire, Buckinghamshire, Cambridgeshire, London and surrounding areas.</p>
                 <p>Click the link below to get a more extensive list of our Process Serving services, which we offer throughout London, Bedford, Buckinghamshire &amp; surrounding areas.</p>
                 <a href="./our-services/process-server-bedford"><strong>Read more about the types of documents we process...</strong></a>
               </div>
@@ -40,8 +40,8 @@ const Services: React.FC = () => (
             <div className='card-content'>
               <h3 className='title large-title'>Legal Courier</h3>
               <div className='content'>
-                <p>We also offer a range of Legal Courier services to our clients, with a keen focus on Data Protection legislation and best practise at all times.</p>
-                <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
+                <p>We also offer a range of Legal Courier services to our clients.</p>
+                <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire, Cambridge or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
                 <a href="./our-services/legal-courier-bedford"><strong>Get more details of the Legal Courier services we offer...</strong></a>  
               </div>
             </div>
