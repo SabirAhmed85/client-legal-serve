@@ -6,9 +6,11 @@ import { withTracker } from './withTracker';
 import { Route, Switch } from 'react-router-dom';
 import { RoutesConfig } from './config/routes.config';
 import { LegalCourierBedford } from './containers/Services/LegalCourierBedford';
+import ScrollToTop from './config/utils';
 
 const App: React.FC = () => (
   <Layout>
+    <ScrollToTop />
     <Switch>
       <Route
         path={RoutesConfig.Home.path}
