@@ -3,6 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 export const Box = styled.div`
   margin-right: 20px;
+  width: 150px;
 
   .popover-wrapper.right {
     .popover-content {
@@ -29,6 +30,10 @@ export const SelectedItem = styled.button`
   border-radius: ${themeGet('radius.3', '6')}px;
   outline: 0;
   cursor: pointer;
+
+  &:hover span {
+    color: #fff;
+  }
 
   span {
     display: flex;
@@ -63,7 +68,7 @@ export const MenuItem = styled.button`
   width: 100%;
   font-size: 15px;
   font-weight: 700;
-  color: ${themeGet('colors.darkBold', '#0D1136')};
+  color: ${themeGet('colors.light', '#ddd')};
   line-height: 1.2em;
   display: block;
   padding: 15px 30px;
@@ -72,11 +77,16 @@ export const MenuItem = styled.button`
   display: flex;
   align-items: center;
   border: 0;
-  border-bottom: 1px solid ${themeGet('colors.borderColor', '#f1f1f1')};
+  border-bottom: 1px solid ${themeGet('colors.grey', '#444')};
   border-radius: 0;
   background-color: transparent;
   outline: 0;
   cursor: pointer;
+
+  &:hover {
+    color: ${themeGet('colors.light', '#fff')};
+    background-color: ${themeGet('colors.grey', '#444')};
+  }
 
   &:last-child {
     border-bottom: 0;

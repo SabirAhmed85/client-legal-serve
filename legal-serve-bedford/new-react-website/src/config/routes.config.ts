@@ -46,6 +46,17 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
         description: 'Process Serving &amp; Legal Courier Services in London, Bedfordshire &amp; Buckinghamshire'
       }
     },
+    LegalCourierBedford: {
+      path: '/our-services/legal-courier-bedford',
+      exact: true,
+      displayName: 'Legal Courier Bedford',
+      activeClassName: 'is-active',
+      icon: 'info',
+      metaInfo: {
+        title: 'Our Services | Process Serving, Legal Courier Services',
+        description: 'Process Serving &amp; Legal Courier Services in London, Bedfordshire &amp; Buckinghamshire'
+      }
+    },
   Contact: {
     path: '/contact',
     exact: true,
@@ -68,16 +79,4 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
       description: 'See our clients, Local Authorities and Legal Practises ranging across Bedfordshire, Buckinghamshire, Cambridgeshire & London'
     }
   }
-  /*,
-  About: {
-    path: '/about',
-    exact: true,
-    displayName: 'About',
-    activeClassName: 'is-active',
-    icon: 'info',
-    metaInfo: {
-      title: 'About | ReactSeoFriendlySpaTemplate',
-      description: 'About page description - limit of 160 characters (try for 150-155).'
-    }
-  }*/
 });

@@ -1,7 +1,8 @@
 import React from 'react';
-import { MetaInfo } from '../../components';
+import { MetaInfo, OurClients } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
-import Hero from '../../components/Hero'; 
+import Hero from '../../components/Hero';
+import SilverBanner from '../../components/SilverBanner';
 import OurPromise from '../../components/OurPromise';
 
 import OurServicesImg from '../../assets/img/court-order-serving-bedford.png';
@@ -13,6 +14,9 @@ const Home: React.FC = () => (
   <div className='view-wrapper'>
     <MetaInfo {...RoutesConfig.Home.metaInfo} />
     <Hero item='Home' />
+    <SilverBanner className='is-hidden-mobile'>
+      <OurClients minimal={true} />
+    </SilverBanner>
     <section className='container dashboard-content'>
       <div className='columns'>
         <div className='column'>

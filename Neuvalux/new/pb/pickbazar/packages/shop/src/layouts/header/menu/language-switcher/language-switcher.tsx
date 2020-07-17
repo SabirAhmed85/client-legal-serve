@@ -14,11 +14,10 @@ import { ChevronDownIcon } from 'assets/icons/ChevronDownIcon';
 
 const LANGUAGES = [
   { id: 'ar', label: 'Arabic', intlLangName: 'intlArabic', icon: <SAFlag /> },
-  { id: 'zh', label: 'Chinese', intlLangName: 'intlChinese', icon: <CNFlag /> },
+  { id: 'ur', label: 'Urdu', intlLangName: 'intlUrdu', icon: <SAFlag /> },
   { id: 'en', label: 'English', intlLangName: 'intlEnglish', icon: <GBFlag /> },
   { id: 'de', label: 'German', intlLangName: 'intlGerman', icon: <DEFlag /> },
-  { id: 'he', label: 'Hebrew', intlLangName: 'intlHebrew', icon: <ILFlag /> },
-  { id: 'es', label: 'Spanish', intlLangName: 'intlSpanish', icon: <ESFlag /> },
+  { id: 'he', label: 'Hebrew', intlLangName: 'intlHebrew', icon: <ILFlag /> }
 ];
 
 const Icon = styled.span`
@@ -56,6 +55,7 @@ const LanguageSwitcher: React.FC<{}> = () => {
   const selectedLanguage = LANGUAGES.find((x) => x.id === locale);
   const languageChangeHandler = (e) => {
     changeLanguage(e.target.value);
+    console.log(e.target.value);
   };
   return (
     <Box>

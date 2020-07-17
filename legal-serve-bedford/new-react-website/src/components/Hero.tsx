@@ -9,7 +9,7 @@ export interface HeroProps {
 const Hero = (props: HeroProps) => {
   const HeroProps = {
     Home: {
-      title: 'Welcome to Legal Serve, local Process Servers and Legal Couriers in Bedfordshire & Buckinghamshire.'
+      title: 'Welcome to Legal Serve, local Process Servers and Legal Couriers in Bedfordshire, Buckinghamshire & Cambridgeshire.'
     },
     Services: {
       title: 'Our Services in Legal Support',

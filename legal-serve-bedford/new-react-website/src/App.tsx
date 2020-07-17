@@ -1,14 +1,16 @@
 import React from 'react';
 import Layout from './Layout';
 import { NotFound } from './components';
-import { Home, Services, ContactLegalServe, Clients } from './containers';
+import { Home, Services, ContactLegalServe, Clients, ProcessServerBedford } from './containers';
 import { withTracker } from './withTracker';
 import { Route, Switch } from 'react-router-dom';
 import { RoutesConfig } from './config/routes.config';
-import { ProcessServerBedford } from './containers/Services';
+import { LegalCourierBedford } from './containers/Services/LegalCourierBedford';
+import ScrollToTop from './config/utils';
 
 const App: React.FC = () => (
   <Layout>
+    <ScrollToTop />
     <Switch>
       <Route
         path={RoutesConfig.Home.path}
@@ -19,16 +21,17 @@ const App: React.FC = () => (
         path={RoutesConfig.Services.path}
         component={withTracker(Services)}
         exact={RoutesConfig.Services.exact}
-        render={() => (
-          <>
-            <Route
-              path={RoutesConfig.ProcessServerBedford.path}
-              component={withTracker(ProcessServerBedford)}
-              exact={RoutesConfig.ProcessServerBedford.exact}
-            />
-          </>
-        )}
       />
+        <Route
+          path={RoutesConfig.ProcessServerBedford.path}
+          component={withTracker(ProcessServerBedford)}
+          exact={RoutesConfig.ProcessServerBedford.exact}
+        />
+        <Route
+          path={RoutesConfig.LegalCourierBedford.path}
+          component={withTracker(LegalCourierBedford)}
+          exact={RoutesConfig.LegalCourierBedford.exact}
+        />
       <Route
         path={RoutesConfig.Contact.path}
         component={withTracker(ContactLegalServe)}
