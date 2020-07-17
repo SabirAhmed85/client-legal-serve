@@ -17,7 +17,7 @@ const PopoverWrapper = styled.div`
     padding: 15px 20px;
     position: absolute;
     border-radius: 6px;
-    background-color: #ffffff;
+    background-color: #333;
     box-shadow: 0 3px 20px rgba(142, 142, 142, 0.14);
     z-index: 99;
     &:before {
@@ -27,7 +27,7 @@ const PopoverWrapper = styled.div`
       height: 0;
       border-style: solid;
       border-width: 0 8px 9px 8px;
-      border-color: transparent transparent #ffffff transparent;
+      border-color: transparent transparent #555 transparent;
       top: -8px;
       left: 15px;
       box-shadow: -4px -4px 8px -3px rgba(142, 142, 142, 0.14);

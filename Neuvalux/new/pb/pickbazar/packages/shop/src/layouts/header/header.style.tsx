@@ -40,7 +40,7 @@ export const SearchWrapper = styled.div`
 
 const HeaderWrapper = styled.header`
   /* padding: 30px 60px; */
-  padding: 20px 60px;
+  padding: 0 60px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

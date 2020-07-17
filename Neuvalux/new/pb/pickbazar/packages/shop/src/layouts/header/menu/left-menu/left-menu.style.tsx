@@ -20,14 +20,16 @@ export const LeftMenuBox = styled.div`
       transition: 0.15s ease-in-out;
       display: flex;
       align-items: center;
-      margin-right: 45px;
+      width: 150px;
+      height: 80px;
+      border-bottom: 2px solid #31080c;
 
       @media (max-width: 1400px) {
-        margin-right: 35px;
         font-size: 15px;
       }
       &:hover {
         color: ${themeGet('colors.light', '#fff')};
+        border-bottom: 2px solid #ddd;
       }
       &.current-page {
         color: ${themeGet('colors.light', '#fff')};

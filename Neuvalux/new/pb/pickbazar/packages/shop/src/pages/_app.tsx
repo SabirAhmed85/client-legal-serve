@@ -15,6 +15,7 @@ import localEs from 'data/translation/es.json';
 import localDe from 'data/translation/de.json';
 import localCn from 'data/translation/zh.json';
 import localIl from 'data/translation/he.json';
+import localUr from 'data/translation/ur.json';
 
 // External CSS import here
 import 'rc-drawer/assets/index.css';
@@ -33,6 +34,7 @@ const messages = {
   de: localDe,
   zh: localCn,
   he: localIl,
+  ur: localUr
 };
 // need to provide types
 export default function ExtendedApp({ Component, pageProps }) {

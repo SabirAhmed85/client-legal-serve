@@ -5,8 +5,14 @@ import Hero from '../../components/Hero';
 
 import ProcessServerImg from '../../assets/img/process-serving-in-bedford.jpg';
 import LegalCourierImg from '../../assets/img/legal-courier-bedford.jpg';
+import { Route, Switch, useRouteMatch, NavLink } from 'react-router-dom';
+import { ProcessServerBedford } from './ProcessServerBedford';
+import { withTracker } from '../../withTracker';
 
-const Services: React.FC = () => (
+const Services: React.FC = () => {
+  let { path, url } = useRouteMatch();
+
+  return (
   <section className='view-wrapper'>
     <MetaInfo {...RoutesConfig.Services.metaInfo} />
     <Hero item='Services' />
@@ -55,5 +61,6 @@ const Services: React.FC = () => (
     </section>
   </section>
 );
+  };
 
 export default Services;

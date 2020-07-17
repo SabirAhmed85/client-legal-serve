@@ -1,14 +1,15 @@
 import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
+import device from '../config/device.config';
 
 import BedfordBoroughCouncilLogo from '../assets/img/client-logos/bedford-borough-council-client-logo.png';
-import BoltonCouncilLogo from '../assets/img/client-logos/bolton-council-client-logo.jpg';
+import BoltonCouncilLogo from '../assets/img/client-logos/bolton-council-client-logo.png';
 import PowysCouncilLogo from '../assets/img/client-logos/powys-county-council-wales-client-logo.png';
+import MiltonKeynesCouncilLogo from '../assets/img/client-logos/milton-keynes-council-client-logo.png';
 import CambridgeLawPractiseLogo from '../assets/img/client-logos/cambridge-family-law-practise-client-logo.png';
 import FullersLogo from '../assets/img/client-logos/fullers-solicitors-bedford-client-logo.png';
-import KennedysLogo from '../assets/img/client-logos/Kennedys-law-solicitors-cambridge-and-london-client-logo.jpg';
-import WatsonsLogo from '../assets/img/client-logos/watsons-solicitors-warrington-client-logo.jpg';
-import RayBorleyLogo from '../assets/img/client-logos/ray-borley-dunkley-llp-milton-keynes-client-logo.jpg';
-import styled from 'styled-components';
+import KennedysLogo from '../assets/img/client-logos/Kennedys-law-solicitors-cambridge-and-london-client-logo.png';
+import WatsonsLogo from '../assets/img/client-logos/watsons-solicitors-warrington-client-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // 'styled-components' specific to BackToTop.tsx component
@@ -28,8 +29,12 @@ const NextSlideLink = styled.a<{}>`
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px;
   transition: opacity 0.4s ease, bottom 0.4s ease;
-  bottom: 8rem};
-  opacity: 0.5};
+  top: 10%;
+  opacity: 0.5;
+
+  @media ${device.tablet} {
+    top: 28%;
+  }
 `;
 
 const AngleRightIcon = styled(FontAwesomeIcon)`
@@ -40,7 +45,7 @@ const AngleRightIcon = styled(FontAwesomeIcon)`
   margin: 0.75rem auto auto auto;
 `;
 
-const OurClients = () => {
+const OurClients = (props) => {
   const showLocalAuth = useRef<string>('show');
   const showLawPractises = useRef<string>('hide');
   const [show, setShow] = useState<boolean>(false);
@@ -60,10 +65,10 @@ const OurClients = () => {
   return (
     <div className='columns'>
       <div className='column' style={{position: 'relative'}}>
-        <h3 className='title large-title'>Our Clients</h3>
+        {props.minimal ? '' : <h3 className='title large-title'>Our Clients</h3>}
         <div className='content clients-slides'>
           <div className={`fadeIn-animation ${showLocalAuth.current}`}>
-            <h4 className='title small-title'>Local Authorities</h4>
+            {props.minimal ? '' : <h4 className='title small-title'>Local Authorities</h4>}
             <div className='columns is-tablet'>
               <div className='column has-text-centered'>
                 <img src={BedfordBoroughCouncilLogo} alt='Bedford Borough Council Logo'/>
@@ -75,12 +80,12 @@ const OurClients = () => {
                 <img src={PowysCouncilLogo} alt='Powys County Council (in Wales) Logo'/>
               </div>
               <div className='column has-text-centered'>
-                <img src={BedfordBoroughCouncilLogo} alt='Bedford Borough Council'/>
+                <img src={MiltonKeynesCouncilLogo} alt='Milton Keynes Council'/>
               </div>
             </div>
           </div>
           <div className={`fadeIn-animation ${showLawPractises.current}`}>
-            <h4 className='title small-title'>Law Practises & Solicitors</h4>
+            {props.minimal ? '' : <h4 className='title small-title'>Law Practises & Solicitors</h4>}
             <div className='columns is-tablet'>
               <div className='column has-text-centered'>
                 <img src={CambridgeLawPractiseLogo} alt='Cambridge Family Law Practise Logo'/>
@@ -94,9 +99,11 @@ const OurClients = () => {
               <div className='column has-text-centered'>
                 <img src={WatsonsLogo} alt='Watsons Solicitors (in Warrington) Logo'/>
               </div>
+              {/*
               <div className='column has-text-centered'>
                 <img src={RayBorleyLogo} alt='Ray Borley Dunkley LLP (in Bedford) Logo'/>
               </div>
+              */}
             </div>
           </div>
         </div>
@@ -109,6 +116,10 @@ const OurClients = () => {
       </div>
     </div>
   );
+};
+
+OurClients.defaultProps = {
+  minimal: false
 };
 
 export default OurClients;
