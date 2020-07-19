@@ -8,6 +8,7 @@ import OurPromise from './OurPromise';
 import OurClients from './OurClients';
 import MainContactForm from './MainContactForm';
 import InlineContactPanel from './InlineContactPanel';
+import SilverBanner from './SilverBanner';
 
 export {
   Footer,
@@ -19,5 +20,6 @@ export {
   OurPromise,
   OurClients,
   MainContactForm,
-  InlineContactPanel
+  InlineContactPanel,
+  SilverBanner
 };

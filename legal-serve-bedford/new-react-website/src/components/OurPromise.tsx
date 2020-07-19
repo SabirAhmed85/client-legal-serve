@@ -1,5 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled from 'styled-components';
+
+const StyledPromiseTickIcon = styled(FontAwesomeIcon)`
+  color: #3273dc;
+  margin-right: 10px;
+`;
 
 const OurPromise = () => (
   <div className='columns'>
@@ -10,26 +16,26 @@ const OurPromise = () => (
           <div className='content'>
             <div className='columns'>
               <div className='column'>
-                <p><FontAwesomeIcon icon='check' />To serve your documents promptly and in accordance with all CPR rules.</p>
+                <p><StyledPromiseTickIcon icon='check' />To serve your documents promptly and in accordance with all CPR rules.</p>
               </div>
               <div className='column'>
-                <p><FontAwesomeIcon icon='check' />To serve the papers in according with your special instructions.</p>
-              </div>
-            </div>
-            <div className='columns'>
-              <div className='column'>
-                <p><FontAwesomeIcon icon='check' />To ensure all Data Protection and Human Rights legislation is adhered to.</p>
-              </div>
-              <div className='column'>
-                <p><FontAwesomeIcon icon='check' />To keep you updated and advise you when service has been completed.</p>
+                <p><StyledPromiseTickIcon icon='check' />To serve the papers in according with your special instructions.</p>
               </div>
             </div>
             <div className='columns'>
               <div className='column'>
-                <p><FontAwesomeIcon icon='check' />To monitor all cases we are dealing with and ensure they are returned to you on time.</p>
+                <p><StyledPromiseTickIcon icon='check' />To ensure all Data Protection and Human Rights legislation is adhered to.</p>
               </div>
               <div className='column'>
-                <p><FontAwesomeIcon icon='check' />To ensure that all statements or affadavits are completed correctly.</p>
+                <p><StyledPromiseTickIcon icon='check' />To keep you updated and advise you when service has been completed.</p>
+              </div>
+            </div>
+            <div className='columns'>
+              <div className='column'>
+                <p><StyledPromiseTickIcon icon='check' />To monitor all cases we are dealing with and ensure they are returned to you on time.</p>
+              </div>
+              <div className='column'>
+                <p><StyledPromiseTickIcon icon='check' />To ensure that all statements or affadavits are completed correctly.</p>
               </div>
             </div>
           </div>

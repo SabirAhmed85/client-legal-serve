@@ -69,7 +69,7 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
     }
   },
   Clients: {
-    path: '/clients',
+    path: '/our-clients',
     exact: true,
     displayName: 'Our Clients',
     activeClassName: 'is-active',
@@ -78,5 +78,16 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
       title: 'Our Clients across Bedfordshire, Buckinghamshire & Cambridgeshire | Process Serving, Legal Courier Services',
       description: 'See our clients, Local Authorities and Legal Practises ranging across Bedfordshire, Buckinghamshire, Cambridgeshire & London'
     }
-  }
+  },
+    ClientType: {
+      path: '/our-clients/:clientType',
+      exact: true,
+      displayName: 'Our Clients',
+      activeClassName: 'is-active',
+      icon: 'info',
+      metaInfo: {
+        title: 'Our Clients across Bedfordshire, Buckinghamshire & Cambridgeshire | Process Serving, Legal Courier Services',
+        description: 'See our clients, Local Authorities and Legal Practises ranging across Bedfordshire, Buckinghamshire, Cambridgeshire & London'
+      }
+    }
 });

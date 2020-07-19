@@ -15,7 +15,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // 'styled-components' specific to BackToTop.tsx component
 const NextSlideLink = styled.a<{}>`
   width: 3.5rem;
-  z-index: 9999;
   display: block;
   height: 3.5rem;
   right: 1.25rem;
@@ -45,6 +44,10 @@ const AngleRightIcon = styled(FontAwesomeIcon)`
   margin: 0.75rem auto auto auto;
 `;
 
+const StyledColumn = styled.div`
+  padding: 0 2em;
+`;
+
 const OurClients = (props) => {
   const showLocalAuth = useRef<string>('show');
   const showLawPractises = useRef<string>('hide');
@@ -70,35 +73,35 @@ const OurClients = (props) => {
           <div className={`fadeIn-animation ${showLocalAuth.current}`}>
             {props.minimal ? '' : <h4 className='title small-title'>Local Authorities</h4>}
             <div className='columns is-tablet'>
-              <div className='column has-text-centered'>
+              <StyledColumn className='column has-text-centered'>
                 <img src={BedfordBoroughCouncilLogo} alt='Bedford Borough Council Logo'/>
-              </div>
-              <div className='column has-text-centered'>
+              </StyledColumn>
+              <StyledColumn className='column has-text-centered'>
                 <img src={BoltonCouncilLogo} alt='Bolton Council Logo'/>
-              </div>
-              <div className='column has-text-centered'>
+              </StyledColumn>
+              <StyledColumn className='column has-text-centered'>
                 <img src={PowysCouncilLogo} alt='Powys County Council (in Wales) Logo'/>
-              </div>
-              <div className='column has-text-centered'>
+              </StyledColumn>
+              <StyledColumn className='column has-text-centered'>
                 <img src={MiltonKeynesCouncilLogo} alt='Milton Keynes Council'/>
-              </div>
+              </StyledColumn>
             </div>
           </div>
           <div className={`fadeIn-animation ${showLawPractises.current}`}>
             {props.minimal ? '' : <h4 className='title small-title'>Law Practises & Solicitors</h4>}
             <div className='columns is-tablet'>
-              <div className='column has-text-centered'>
+              <StyledColumn className='column has-text-centered'>
                 <img src={CambridgeLawPractiseLogo} alt='Cambridge Family Law Practise Logo'/>
-              </div>
-              <div className='column has-text-centered'>
+              </StyledColumn>
+              <StyledColumn className='column has-text-centered'>
                 <img src={FullersLogo} alt='Fullers Solicitors (in Bedford) Logo'/>
-              </div>
-              <div className='column has-text-centered'>
+              </StyledColumn>
+              <StyledColumn className='column has-text-centered'>
                 <img src={KennedysLogo} alt='Kennedys Law (servicing Cambridge & London) Logo'/>
-              </div>
-              <div className='column has-text-centered'>
+              </StyledColumn>
+              <StyledColumn className='column has-text-centered'>
                 <img src={WatsonsLogo} alt='Watsons Solicitors (in Warrington) Logo'/>
-              </div>
+              </StyledColumn>
               {/*
               <div className='column has-text-centered'>
                 <img src={RayBorleyLogo} alt='Ray Borley Dunkley LLP (in Bedford) Logo'/>

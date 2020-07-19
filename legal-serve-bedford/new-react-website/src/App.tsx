@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import { RoutesConfig } from './config/routes.config';
 import { LegalCourierBedford } from './containers/Services/LegalCourierBedford';
 import ScrollToTop from './config/utils';
+import { ClientType } from './containers/Clients/ClientType';
 
 const App: React.FC = () => (
   <Layout>
@@ -42,6 +43,11 @@ const App: React.FC = () => (
         component={withTracker(Clients)}
         exact={RoutesConfig.Clients.exact}
       />
+        <Route
+          path={RoutesConfig.ClientType.path}
+          component={ClientType}
+          exact={RoutesConfig.ClientType.exact}
+        />
       <Route component={NotFound} />
     </Switch>
   </Layout>
