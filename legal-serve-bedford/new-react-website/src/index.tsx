@@ -7,7 +7,7 @@ import './config/fa.config';
 import * as serviceWorker from './serviceWorker';
 
 render(
-  <BrowserRouter basename='/new'>
+  <BrowserRouter>
     <App />
   </BrowserRouter>,
   document.getElementById("root")

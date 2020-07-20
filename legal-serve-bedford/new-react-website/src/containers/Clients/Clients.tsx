@@ -5,7 +5,7 @@ import Hero from '../../components/Hero';
 import { useRouteMatch } from 'react-router-dom';
 
 const Clients: React.FC = () => {
-  const path = `/new${useRouteMatch().path}`;
+  const path = `${useRouteMatch().path}`;
 
   return (
     <section className='view-wrapper'>

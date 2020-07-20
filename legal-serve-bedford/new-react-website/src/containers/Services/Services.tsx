@@ -8,7 +8,7 @@ import LegalCourierImg from '../../assets/img/legal-courier-bedford.jpg';
 import { useRouteMatch } from 'react-router-dom';
 
 const Services: React.FC = () => {
-  const path = `/new${useRouteMatch().path}`;
+  const path = `${useRouteMatch().path}`;
 
   return (
     <section className='view-wrapper'>

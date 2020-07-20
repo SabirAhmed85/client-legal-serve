@@ -1,5 +1,5 @@
 const SitemapGenerator = require("sitemap-generator");
-const sitemapUrl = "https://www.legalservebedford.co.uk/new/";
+const sitemapUrl = "https://www.legalservebedford.co.uk";
 
 const generator = SitemapGenerator(sitemapUrl, {
     filepath: `${__dirname}/public/sitemap.xml`,

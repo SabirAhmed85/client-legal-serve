@@ -1,6 +1,6 @@
 {
     "name": "legal-serve-bedford-website",
-    "homepage": "http://legalservebedford.co.uk/new",
+    "homepage": "http://legalservebedford.co.uk",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
