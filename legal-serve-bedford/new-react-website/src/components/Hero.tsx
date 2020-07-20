@@ -34,27 +34,27 @@ const Hero = (props: HeroProps) => {
     },
     ClientType: {
       'bedfordshire-clients': {
-        title: 'Our Bedfordshire Clients',
+        title: 'Bedfordshire Clients',
         summary: 'Read about some of our Bedfordshire clients'
       },
       'buckinghamshire-clients': {
-        title: 'Our Buckinghamshire Clients',
+        title: 'Buckinghamshire Clients',
         summary: 'Read about some of our Milton Keynes & Buckinghamshire-based clients'
       },
       'cambridgeshire-clients': {
-        title: 'Our Cambridgeshire Clients',
+        title: 'Cambridgeshire Clients',
         summary: 'Read about some of our Cambridgeshire-based clients'
       },
       'clients-in-surrounding-areas': {
-        title: 'Our Clients in Surrounding Areas',
+        title: 'Clients in Surrounding Areas',
         summary: 'Read about some of our clients in surrounding areas'
       },
       'local-authority-clients': {
-        title: 'Our Local Authority Clients',
+        title: 'Local Authority Clients',
         summary: 'Read about some of our Local Authority clients'
       },
       'legal-practise-clients': {
-        title: 'Our Legal Practise Clients',
+        title: 'Legal Practise Clients',
         summary: 'Read about some of our Legal Practise clients'
       }
     }

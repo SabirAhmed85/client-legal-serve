@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { RoutesConfig } from '../config/routes.config';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MainLogo = require('../assets/img/logo.png');
 

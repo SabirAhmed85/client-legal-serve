@@ -3,42 +3,41 @@ import { MetaInfo, OurPromise, Hero, SilverBanner, InlineContactPanel, OurClient
 import { RoutesConfig } from '../../../config/routes.config';
 
 import ProcessServerImg from '../../../assets/img/process-serving-in-bedford.jpg';
-import LegalCourierImg from '../../../assets/img/legal-courier-bedford.jpg';
 import { useParams } from 'react-router-dom';
 
 const ClientTypesConfig = {
   'bedfordshire-clients': {
-    subtitle: 'Clients in Bedfordshire',
+    subtitle: 'Our Clients in Bedfordshire',
     clientLogos: [
 
     ]
   },
   'buckinghamshire-clients': {
-    subtitle: 'Clients in Buckinghamshire',
+    subtitle: 'Our Clients in Buckinghamshire',
     clientLogos: [
 
     ]
   },
   'cambridgeshire-clients': {
-    subtitle: 'Clients in Cambridgeshire',
+    subtitle: 'Our Clients in Cambridgeshire',
     clientLogos: [
 
     ]
   },
   'clients-in-surrounding-areas': {
-    subtitle: 'Clients in surrounding areas',
+    subtitle: 'Our Clients in surrounding areas',
     clientLogos: [
 
     ]
   },
   'local-authority-clients': {
-    subtitle: 'Local Authority clients',
+    subtitle: 'Our Local Authority clients',
     clientLogos: [
 
     ]
   },
   'legal-practise-clients': {
-    subtitle: 'Law Practise clients',
+    subtitle: 'Our Law Practise clients',
     clientLogos: [
 
     ]
@@ -47,14 +46,13 @@ const ClientTypesConfig = {
 
 const ClientType: React.FC = () => {
   let { clientType } = useParams();
-  console.log(clientType);
 
   return (
     <section className='view-wrapper'>
       <MetaInfo {...RoutesConfig.Clients.metaInfo} />
       <Hero item='ClientType' clientType={clientType} />
       <SilverBanner className='is-hidden-mobile'>
-        <OurClients minimal={true} />
+        <OurClients minimal={true} clientType={clientType} />
       </SilverBanner>
       <section className='container dashboard-content'>
         <div className='columns'>

@@ -1,17 +1,11 @@
 import React, { useRef, useState } from 'react';
+import classNames from 'classnames';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import device from '../config/device.config';
+import { ClientsBannerConfig, ClientsBannerPanelConfig, ClientsLogos } from '../config/clients-banner.config';
 
-import BedfordBoroughCouncilLogo from '../assets/img/client-logos/bedford-borough-council-client-logo.png';
-import BoltonCouncilLogo from '../assets/img/client-logos/bolton-council-client-logo.png';
-import PowysCouncilLogo from '../assets/img/client-logos/powys-county-council-wales-client-logo.png';
-import MiltonKeynesCouncilLogo from '../assets/img/client-logos/milton-keynes-council-client-logo.png';
-import CambridgeLawPractiseLogo from '../assets/img/client-logos/cambridge-family-law-practise-client-logo.png';
-import FullersLogo from '../assets/img/client-logos/fullers-solicitors-bedford-client-logo.png';
-import KennedysLogo from '../assets/img/client-logos/Kennedys-law-solicitors-cambridge-and-london-client-logo.png';
-import WatsonsLogo from '../assets/img/client-logos/watsons-solicitors-warrington-client-logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+const ClientLogoImages = require.context('../assets/img/client-logos', true);
 // 'styled-components' specific to BackToTop.tsx component
 const NextSlideLink = styled.a<{}>`
   width: 3.5rem;
@@ -48,7 +42,69 @@ const StyledColumn = styled.div`
   padding: 0 2em;
 `;
 
-const OurClients = (props) => {
+
+
+const clientsSlidesContent = (props, showLocalAuth?, showLawPractises?) => {
+  const clientType = props.clientType;
+  let html = [];
+
+  const clientsLogosContent = (panel: ClientsBannerPanelConfig) => {
+    let clientsLogosHtml = [];
+
+    Object.keys(ClientsLogos).forEach((val, index) => {
+      const ClientLogo = ClientsLogos[val];
+
+      if (
+        ((panel.clientType && ClientLogo.type === panel.clientType)
+        || (panel.region && ClientLogo.region.includes(panel.region)))
+        && ((clientType === 'default' && ClientLogo.default)
+          || clientType !== 'default')
+      ) {
+        clientsLogosHtml.push(
+          <StyledColumn key={ClientLogo.imageUrl} className='column has-text-centered'>
+            <img src={ClientLogoImages(`./${ClientLogo.imageUrl}`)} alt={ClientLogo.altTag}/>
+          </StyledColumn>
+        );
+      }
+    });
+
+    return clientsLogosHtml;
+  };
+
+  ClientsBannerConfig[clientType].panels.forEach((panel, index) => {
+    html.push(
+    <div key={panel.clientType || panel.region}
+      className={classNames({
+        'fadeIn-animation': ClientsBannerConfig[clientType].panels.length > 1,
+        'show': (ClientsBannerConfig[clientType].panels.length > 1 && index === 0) ? showLocalAuth.current === 'show' : showLawPractises.current === 'show',
+        'hide': (ClientsBannerConfig[clientType].panels.length > 1 && index === 1) ? showLawPractises.current === 'hide' : showLocalAuth.current === 'hide',
+      })}
+    >
+      {(() => { 
+        if (props.minimal !== true) {
+          return (
+          <h4 className='title small-title'>
+            {panel.clientType === 'local-authority' ? 'Local Authorities' : 'Law Practises & Solicitors'}
+          </h4>
+          )
+        }
+      })()}
+      <div className='columns is-tablet'>
+        {clientsLogosContent(panel)}
+      </div>
+    </div>
+    );
+  });
+
+  return html;
+};
+
+type OurClientsProps = {
+  minimal?: boolean;
+  clientType?: string;
+};
+
+const OurClients = (props: OurClientsProps) => {
   const showLocalAuth = useRef<string>('show');
   const showLawPractises = useRef<string>('hide');
   const [show, setShow] = useState<boolean>(false);
@@ -57,12 +113,11 @@ const OurClients = (props) => {
     if (showLocalAuth.current === 'show') {
       showLocalAuth.current = 'hide';
       showLawPractises.current = 'show';
-      setShow(true);
     } else if (showLocalAuth.current === 'hide') {
       showLocalAuth.current = 'show';
       showLawPractises.current = 'hide';
-      setShow(false);
     }
+    setShow(!show);
   };
 
   return (
@@ -70,59 +125,28 @@ const OurClients = (props) => {
       <div className='column' style={{position: 'relative'}}>
         {props.minimal ? '' : <h3 className='title large-title'>Our Clients</h3>}
         <div className='content clients-slides'>
-          <div className={`fadeIn-animation ${showLocalAuth.current}`}>
-            {props.minimal ? '' : <h4 className='title small-title'>Local Authorities</h4>}
-            <div className='columns is-tablet'>
-              <StyledColumn className='column has-text-centered'>
-                <img src={BedfordBoroughCouncilLogo} alt='Bedford Borough Council Logo'/>
-              </StyledColumn>
-              <StyledColumn className='column has-text-centered'>
-                <img src={BoltonCouncilLogo} alt='Bolton Council Logo'/>
-              </StyledColumn>
-              <StyledColumn className='column has-text-centered'>
-                <img src={PowysCouncilLogo} alt='Powys County Council (in Wales) Logo'/>
-              </StyledColumn>
-              <StyledColumn className='column has-text-centered'>
-                <img src={MiltonKeynesCouncilLogo} alt='Milton Keynes Council'/>
-              </StyledColumn>
-            </div>
-          </div>
-          <div className={`fadeIn-animation ${showLawPractises.current}`}>
-            {props.minimal ? '' : <h4 className='title small-title'>Law Practises & Solicitors</h4>}
-            <div className='columns is-tablet'>
-              <StyledColumn className='column has-text-centered'>
-                <img src={CambridgeLawPractiseLogo} alt='Cambridge Family Law Practise Logo'/>
-              </StyledColumn>
-              <StyledColumn className='column has-text-centered'>
-                <img src={FullersLogo} alt='Fullers Solicitors (in Bedford) Logo'/>
-              </StyledColumn>
-              <StyledColumn className='column has-text-centered'>
-                <img src={KennedysLogo} alt='Kennedys Law (servicing Cambridge & London) Logo'/>
-              </StyledColumn>
-              <StyledColumn className='column has-text-centered'>
-                <img src={WatsonsLogo} alt='Watsons Solicitors (in Warrington) Logo'/>
-              </StyledColumn>
-              {/*
-              <div className='column has-text-centered'>
-                <img src={RayBorleyLogo} alt='Ray Borley Dunkley LLP (in Bedford) Logo'/>
-              </div>
-              */}
-            </div>
-          </div>
+          {clientsSlidesContent(props, showLocalAuth, showLawPractises)}
         </div>
-        <NextSlideLink
-          aria-label='next'
-          role='button'
-          onClick={() => nextSlide()}>
-          <AngleRightIcon icon='angle-right' />
-        </NextSlideLink>
+        {(() => { 
+          if (ClientsBannerConfig[props.clientType].panels.length > 1) {
+            return (
+              <NextSlideLink
+                aria-label='next'
+                role='button'
+                onClick={() => nextSlide()}>
+                <AngleRightIcon icon='angle-right' />
+              </NextSlideLink>
+            )
+          }
+        })()}
       </div>
     </div>
   );
 };
 
 OurClients.defaultProps = {
-  minimal: false
+  minimal: false,
+  clientType: 'default'
 };
 
 export default OurClients;

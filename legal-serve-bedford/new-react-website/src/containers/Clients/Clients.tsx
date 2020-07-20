@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaInfo, OurPromise, InlineContactPanel, OurClients } from '../../components';
+import { MetaInfo, OurPromise, InlineContactPanel } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
 import Hero from '../../components/Hero';
 import { useRouteMatch } from 'react-router-dom';
