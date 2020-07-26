@@ -1,8 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { RoutesConfig } from '../config/routes.config';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled from 'styled-components';
 
 const MainLogo = require('../assets/img/logo.png');
+
+// 'styled-components' specific to BackToTop.tsx component
+const BurgerMenu = styled.button.attrs(() => ({
+  role: 'button',
+  'aria-label': 'Menu'
+}))`
+  border:none;
+  background: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: -1rem;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.4s ease, bottom 0.4s ease;
+`;
+
+const BurgerMenuIcon = styled(FontAwesomeIcon)`
+  color: #fff;
+  font-size: 1.75em;
+`;
 
 const NavBar: React.FC = () => (
   <nav
@@ -45,12 +70,18 @@ const NavBar: React.FC = () => (
           <span>{RoutesConfig.Contact.displayName}</span>
         </NavLink>
         <div className='seperator' />
+        <BurgerMenu
+          className='is-hidden-tablet'>
+          <BurgerMenuIcon
+            className='is-visible-mobile'
+            icon='bars'></BurgerMenuIcon>
+        </BurgerMenu>
         <NavLink
-          className='navbar-item'
+          className='navbar-item is-hidden-mobile'
           to={RoutesConfig.Clients.path}
           exact={RoutesConfig.Clients.exact}
           activeClassName={RoutesConfig.Clients.activeClassName}
-        >
+        > 
           <span>{RoutesConfig.Clients.displayName}</span>
         </NavLink>
       </div>

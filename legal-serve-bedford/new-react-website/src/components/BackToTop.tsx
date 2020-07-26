@@ -13,12 +13,15 @@ const scrollOptions = {
 };
 
 // 'styled-components' specific to BackToTop.tsx component
-const BackToTopLink = styled.a<{ $show: boolean }>`
+const BackToTopLink = styled.a.attrs(() => ({
+  role: 'button',
+  'aria-label': 'BackToTop'
+}))`
   width: 3.5rem;
   z-index: 9999;
   display: block;
   height: 3.5rem;
-  right: 1.25rem;
+  right: 6.25rem;
   cursor: pointer;
   position: fixed;
   user-select: none;
@@ -29,8 +32,8 @@ const BackToTopLink = styled.a<{ $show: boolean }>`
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px;
   transition: opacity 0.4s ease, bottom 0.4s ease;
-  bottom: ${({ $show }) => $show ? '1.25rem' : '-3.5rem'};
-  opacity: ${({ $show }) => $show ? 1 : 0};
+  bottom: ${(props: {show: boolean}) => props.show ? '24px' : '-3.5rem'};
+  opacity: ${(props: {show: boolean}) => props.show ? 1 : 0};
 `;
 
 const AngleDoubleUpIcon = styled(FontAwesomeIcon)`
@@ -67,9 +70,7 @@ const BackToTop: React.FC = () => {
 
   return (
     <BackToTopLink
-      $show={show}
-      role='button'
-      aria-label='BackToTop'
+      show={show}
       onClick={() => scroll.scrollToTop(scrollOptions)}
     >
       <AngleDoubleUpIcon icon='angle-double-up' />

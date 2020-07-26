@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaInfo, OurClients } from '../../components';
+import { MetaInfo, OurClients, Card } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
 import Hero from '../../components/Hero';
 import SilverBanner from '../../components/SilverBanner';
@@ -32,7 +32,7 @@ const Home: React.FC = () => (
                   <li>Buckinghamshire</li>
                   <li>Surrounding Boroughs / Regions</li>
                 </ul>
-                <a href="process-server-bedford.php"><strong>Get full details of the kinds of clients we service...</strong></a>
+                <a href="./our-clients/"><strong>Get full details of the kinds of clients we service...</strong></a>
               </div>
               <div className='column is-one-quarter has-text-centered'>
                 <img src={OurServicesImg} className='float-right' alt='Legal Support Services, including Court Order serving'/>
@@ -44,55 +44,44 @@ const Home: React.FC = () => (
       <hr />
       <div className='columns'>
         <div className='column'>
-          <div className='card'>
-            <div className='card-image'>
-              <figure className='image is4by3'>
-                <img src={ProcessServerImg} alt='Get Process Serving in Bedfordshire and Buckinghamshire'/>
-              </figure>
-            </div>
-            <div className='card-content'>
-              <h3 className='title large-title'>Local Process Server Bedford</h3>
-              <div className='content'>
-                <p>Our process servers are available to serve all types of Court Orders and legal documents - and we do this in the most secure and professional way possible.</p>
-                <p>Click the link below to get a more extensive list of our Process Serving services, which we offer throughout London, Bedford, Buckinghamshire &amp; surrounding areas.</p>
-                <a href="our-services/process-server-bedford"><strong>Read more about the types of documents we process...</strong></a>
-              </div>
-            </div>
-          </div>
+          <Card
+            image={{
+              src: ProcessServerImg,
+              alt: 'Get Process Serving in Bedfordshire and Buckinghamshire'}}
+            title={{
+              content: 'Local Process Server Bedford',
+              className: 'title large-title'}}>
+            <p>Our process servers are available to serve all types of Court Orders and legal documents - and we do this in the most secure and professional way possible.</p>
+            <p>Click the link below to get a more extensive list of our Process Serving services, which we offer throughout London, Bedford, Buckinghamshire &amp; surrounding areas.</p>
+            <a href="our-services/process-server-bedford"><strong>Read more about the types of documents we process...</strong></a>
+          </Card>
         </div>
         <hr />
         <div className='column'>
-          <div className='card'>
-            <div className='card-image'>
-              <figure className='image is4by3'>
-                <img src={LegalCourierImg} alt='Legal Courier Services in London, Bedford & Buckinghamshire'/>
-              </figure>
-            </div>
-            <div className='card-content'>
-              <h3 className='title large-title'>Legal Courier</h3>
-              <div className='content'>
-                <p>We also offer a range of Legal Courier services to our clients, with a keen focus on Data Protection legislation and best practise at all times.</p>
-                <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
-                <a href="our-services/legal-courier-bedford"><strong>Get more details of the Legal Courier services we offer...</strong></a>  
-              </div>
-            </div>
-          </div>
+          <Card
+            image={{
+              src: LegalCourierImg,
+              alt: 'Legal Courier Services in London, Bedford & Buckinghamshire'}}
+            title={{
+              content: 'Legal Courier',
+              className: 'title large-title'}}>
+            <p>We also offer a range of Legal Courier services to our clients, with a keen focus on Data Protection legislation and best practise at all times.</p>
+            <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
+            <a href="our-services/legal-courier-bedford"><strong>Get more details of the Legal Courier services we offer...</strong></a>  
+          </Card>
         </div>
         <div className='column'>
-          <div className='card'>
-            <div className='card-image'>
-              <figure className='image is4by3'>
-                <img src={LocalKnowledgeImg} alt='Local Process Serving in Bedford and Buckinghamshire done with local knowledge'/>
-              </figure>
-            </div>
-            <div className='card-content'>
-              <h4 className='title small-title'>Court Orders served Locally in London, Bedford &amp; Buckingham</h4>
-              <div className='content'>
-                <p>We provide a service covering all parts of London and every town and village Bedfordshire &amp; Buckinghamshire. Our local knowledge serves us well, and can often prove to be the key to a successful serving or delivery.</p>
-                <a href="our-services/process-server-bedford"><strong>Find out about our Local Knowledge &amp; Awareness...</strong></a>
-              </div>
-            </div>
-          </div>
+          <Card
+            image={{
+              src: LocalKnowledgeImg,
+              alt: 'Local Process Serving in Bedford and Buckinghamshire done with local knowledge'}}
+            title={{
+              content: 'Court Orders served Locally in London, Bedford & Buckingham',
+              size: 'small',
+              className: 'title small-title'}}>
+            <p>We provide a service covering all parts of London and every town and village Bedfordshire &amp; Buckinghamshire. Our local knowledge serves us well, and can often prove to be the key to a successful serving or delivery.</p>
+            <a href="our-services/process-server-bedford"><strong>Find out about our Local Knowledge &amp; Awareness...</strong></a>
+          </Card>
         </div>
       </div>
       <hr />

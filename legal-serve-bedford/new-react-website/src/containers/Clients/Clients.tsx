@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaInfo, OurPromise, InlineContactPanel } from '../../components';
+import { MetaInfo, OurPromise, InlineContactPanel, Card } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
 import Hero from '../../components/Hero';
 import { useRouteMatch } from 'react-router-dom';
@@ -73,6 +73,16 @@ const Clients: React.FC = () => {
           </div>
           
           <div className='column'>
+            <Card
+              dark
+              title={{
+                content: 'Legal Practises',
+                className: 'subtitle',
+                size: 'small'}}>
+              <p>Having served and delivered on behalf of many legal practises, we understand the importance of efficiency and timeliness.</p>
+              <a href={`${path}/legal-practise-clients`}><strong>Read more...</strong></a>
+            </Card>
+            {/*
             <div className='card card-dark'>
               <div className='card-content'>
                 <h4 className='subtitle'>Legal Practises</h4>
@@ -82,6 +92,7 @@ const Clients: React.FC = () => {
                 </div>
               </div>
             </div>
+            */}
           </div>
         </div>
         <hr />

@@ -5,9 +5,23 @@ import styled from 'styled-components';
 import device from '../config/device.config';
 import { ClientsBannerConfig, ClientsBannerPanelConfig, ClientsLogos } from '../config/clients-banner.config';
 
+// types
+type OurClientsProps = {
+  minimal?: boolean;
+  clientType?: string;
+};
+
 const ClientLogoImages = require.context('../assets/img/client-logos', true);
-// 'styled-components' specific to BackToTop.tsx component
-const NextSlideLink = styled.a<{}>`
+
+// 'styled-components' specific to OurClients.tsx component
+const StyledColumn = styled.div`
+  padding: 0 2em;
+`;
+
+const NextSlideLink = styled.a.attrs(() => ({
+  role: 'button',
+  'aria-label': 'Next'
+}))`
   width: 3.5rem;
   display: block;
   height: 3.5rem;
@@ -22,11 +36,11 @@ const NextSlideLink = styled.a<{}>`
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px;
   transition: opacity 0.4s ease, bottom 0.4s ease;
-  top: 10%;
+  top: ${(props: OurClientsProps) => props.minimal ? '10%' : '18%'};
   opacity: 0.5;
 
   @media ${device.tablet} {
-    top: 28%;
+    top: ${(props: OurClientsProps) => props.minimal ? '28%' : '52%'};
   }
 `;
 
@@ -37,12 +51,6 @@ const AngleRightIcon = styled(FontAwesomeIcon)`
   padding-left: 0.1rem;
   margin: 0.75rem auto auto auto;
 `;
-
-const StyledColumn = styled.div`
-  padding: 0 2em;
-`;
-
-
 
 const clientsSlidesContent = (props, showLocalAuth?, showLawPractises?) => {
   const clientType = props.clientType;
@@ -59,6 +67,7 @@ const clientsSlidesContent = (props, showLocalAuth?, showLawPractises?) => {
         || (panel.region && ClientLogo.region.includes(panel.region)))
         && ((clientType === 'default' && ClientLogo.default)
           || clientType !== 'default')
+        && clientsLogosHtml.length < 5
       ) {
         clientsLogosHtml.push(
           <StyledColumn key={ClientLogo.imageUrl} className='column has-text-centered'>
@@ -99,11 +108,6 @@ const clientsSlidesContent = (props, showLocalAuth?, showLawPractises?) => {
   return html;
 };
 
-type OurClientsProps = {
-  minimal?: boolean;
-  clientType?: string;
-};
-
 const OurClients = (props: OurClientsProps) => {
   const showLocalAuth = useRef<string>('show');
   const showLawPractises = useRef<string>('hide');
@@ -131,8 +135,7 @@ const OurClients = (props: OurClientsProps) => {
           if (ClientsBannerConfig[props.clientType].panels.length > 1) {
             return (
               <NextSlideLink
-                aria-label='next'
-                role='button'
+                minimal={props.minimal}
                 onClick={() => nextSlide()}>
                 <AngleRightIcon icon='angle-right' />
               </NextSlideLink>

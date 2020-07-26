@@ -9,6 +9,7 @@ import OurClients from './OurClients';
 import MainContactForm from './MainContactForm';
 import InlineContactPanel from './InlineContactPanel';
 import SilverBanner from './SilverBanner';
+import Card from './Card';
 
 export {
   Footer,
@@ -21,5 +22,6 @@ export {
   OurClients,
   MainContactForm,
   InlineContactPanel,
-  SilverBanner
+  SilverBanner,
+  Card
 };

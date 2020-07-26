@@ -8,6 +8,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.13.1",
         "@fortawesome/free-solid-svg-icons": "^5.13.1",
         "@fortawesome/react-fontawesome": "^0.1.11",
+        "@styled-system/css": "^5.1.5",
         "axios": "^0.19.2",
         "bootstrap": "^4.5.0",
         "bulma": "^0.9.0",
@@ -15,6 +16,7 @@
         "react": "^16.13.1",
         "react-bootstrap": "^1.2.1",
         "react-dom": "^16.13.1",
+        "react-driftjs": "^1.1.11",
         "react-ga": "^3.0.0",
         "react-helmet": "^6.1.0",
         "react-router-dom": "^5.2.0",
@@ -22,6 +24,7 @@
         "react-scroll": "^1.7.16",
         "react-snapshot": "^1.3.0",
         "styled-components": "^5.1.1",
+        "styled-system": "^5.1.5",
         "yup": "^0.29.1"
     },
     "scripts": {
@@ -50,6 +53,9 @@
         "@types/styled-components": "^5.1.0",
         "@types/webpack-env": "^1.15.2",
         "node-sass": "^4.14.1",
+        "sass-extract": "^2.1.0",
+        "sass-extract-js": "^0.4.0",
+        "sass-extract-loader": "^1.1.0",
         "sitemap-generator": "^8.5.0",
         "typescript": "^3.9.6"
     }

@@ -77,6 +77,12 @@ export const ClientsLogos = Object.freeze<Record<string, ClientLogoInfo>>({
     altTag: 'Ray Borley Dunkley LLP Client (Milton Keynes) Logo',
     region: ['buckinghamshire'],
     type: 'legal-practise'
+  },
+  davidsonSmith: {
+    imageUrl: 'davidson-smith-client-logo.png',
+    altTag: 'Davidson Smith & Co Client (Milton Keynes) Logo',
+    region: ['bedfordshire'],
+    type: 'legal-practise'
   }
 });
 
