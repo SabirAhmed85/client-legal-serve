@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { RoutesConfig } from '../config/routes.config';
 
-const MainLogo = require('../assets/img/logo.png');
+const MainLogo = require('../assets/img/logo-NEW.svg');
 
 const Footer: React.FC = () => (
   <footer className='footer'>

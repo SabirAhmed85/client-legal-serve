@@ -4,7 +4,7 @@ import { RoutesConfig } from '../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
-const MainLogo = require('../assets/img/logo.png');
+const MainLogo = require('../assets/img/logo-NEW.svg');
 
 // 'styled-components' specific to BackToTop.tsx component
 const BurgerMenu = styled.button.attrs(() => ({

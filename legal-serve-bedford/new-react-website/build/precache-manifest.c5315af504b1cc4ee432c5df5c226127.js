@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "96812e48052183ccc93ab2104992e7ca",
+    "revision": "0a84899f99b633d554e31831ed80e1ce",
     "url": "/index.html"
   },
   {
-    "revision": "9a3ad910921ce896762a",
+    "revision": "a21de078c5020ee70ee0",
     "url": "/static/css/main.6c6edf95.chunk.css"
   },
   {
-    "revision": "60b614025a87df9e068e",
-    "url": "/static/js/2.f164ae2d.chunk.js"
+    "revision": "32b710e745a6a4d7029e",
+    "url": "/static/js/2.5cdfc990.chunk.js"
   },
   {
     "revision": "a71ab114674399194d3690533c9dc3d6",
-    "url": "/static/js/2.f164ae2d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.5cdfc990.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9a3ad910921ce896762a",
-    "url": "/static/js/main.5f51757b.chunk.js"
+    "revision": "a21de078c5020ee70ee0",
+    "url": "/static/js/main.345d9a66.chunk.js"
   },
   {
     "revision": "c7095652bc84451060d3",
@@ -40,6 +40,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cambridge-family-law-practise-client-logo.888b63ff.png"
   },
   {
+    "revision": "06329bd78ab2cfbdb258241f8eee1c3f",
+    "url": "/static/media/client-logo.06329bd7.psd"
+  },
+  {
     "revision": "590e1cae451f74978ea6bc48ab294ea7",
     "url": "/static/media/court-order-serving-bedford.590e1cae.png"
   },
@@ -60,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/local-knowledge-bedford.795c3017.jpg"
   },
   {
-    "revision": "7500c5b64a9264f37c157da57ebfb386",
-    "url": "/static/media/logo.7500c5b6.png"
+    "revision": "68a63569538fda9c84470a6fd5fff5b7",
+    "url": "/static/media/logo-NEW.68a63569.svg"
   },
   {
     "revision": "e1ffeb06ffacbc1a47ecda0327f62860",

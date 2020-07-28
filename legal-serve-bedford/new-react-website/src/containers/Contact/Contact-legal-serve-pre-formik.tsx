@@ -3,6 +3,18 @@ import { MetaInfo, Hero, OurPromise } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OurClients from '../../components/OurClients';
+import styled from 'styled-components';
+
+const StyledContactIcon = styled(FontAwesomeIcon)`
+  background: #282c34;
+  color: #ddd;
+  font-size: 39px;
+  border-radius: 7px;
+  padding: 7px;
+  margin-right: 25px;
+  width: 39px !important;
+  height:39px;
+`;
 
 type Props = {};
 const InitialContactFormState = {
@@ -173,10 +185,11 @@ class ContactLegalServe extends React.Component<Props, State> {
                 </div>
                 <div className='card-content'>
                   <h3 className='title large-title'>Additional Contact Info.</h3>
+                  <hr />
                   <div className='content'>
-                    <p>We also offer a range of Legal Courier services to our clients, with a keen focus on Data Protection legislation and best practise at all times.</p>
-                    <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
-                    <a href='legal-courier-bedford.php'><strong>Get more details of the Legal Courier services we offer...</strong></a>  
+                    <p><StyledContactIcon icon='phone'/><strong>Phone</strong>: (01234) 92 48 47</p>
+                    <p><StyledContactIcon icon='mobile'/><strong>Mobile</strong>: 07853 166 674</p>
+                    <p><StyledContactIcon icon='at'/><strong>Email</strong>: info@legalservebedford.co.uk</p>
                   </div>
                 </div>
               </div>
