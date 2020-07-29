@@ -28,7 +28,7 @@ const Services: React.FC = () => {
                 <div className='content'>
                   <p>Process Serving in Bedfordshire, Buckinghamshire, Cambridgeshire, London and surrounding areas.</p>
                   <p>Click the link below to get a more extensive list of our Process Serving services, which we offer throughout London, Bedford, Buckinghamshire &amp; surrounding areas.</p>
-                  <a href={`${path}/process-server-bedford`}><strong>Read more about the types of documents we process...</strong></a>
+                  <a href={`our-services/process-server-bedford`}><strong>Read more about the types of documents we process...</strong></a>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Services: React.FC = () => {
                 <div className='content'>
                   <p>We also offer a range of Legal Courier services to our clients.</p>
                   <p>With our courier services, you can rest assured that if you require the delivery of your Legal Documents in Bedford, Luton, Buckinghamshire, Cambridge or London, you'll be in the hands of a reliable and safe legal courier at Legal Serve Bedford.</p>
-                  <a href={`${path}/legal-courier-bedford`}><strong>Get more details of the Legal Courier services we offer...</strong></a>  
+                  <a href={`our-services/legal-courier-bedford`}><strong>Get more details of the Legal Courier services we offer...</strong></a>  
                 </div>
               </div>
             </div>
