@@ -1,7 +1,11 @@
 RewriteEngine On
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteCond %{REQUEST_URI} !\.(js|css)$
+RewriteCond %{REQUEST_URI} !our-clients\.html$
 RewriteRule ^ - [L]
 
 # Fallback all other routes to index.html
+RewriteCond %{REQUEST_URI} !\.(js|css|html)$
+RewriteCond %{REQUEST_URI} !our-clients\.html$
 RewriteRule ^ /index.html [L]

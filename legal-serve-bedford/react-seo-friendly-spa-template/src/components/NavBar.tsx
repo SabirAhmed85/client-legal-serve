@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 import { RoutesConfig } from '../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
