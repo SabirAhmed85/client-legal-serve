@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RoutesConfig } from '../config/routes.config';
 
-const MainLogo = require('../assets/img/logo-NEW.svg');
+const MainLogo = '/img/logo-NEW.svg';
 
 const Footer: React.FC = () => (
   <footer className='footer'>

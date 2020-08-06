@@ -3,9 +3,8 @@ import { MetaInfo, OurPromise, InlineContactPanel, OurClients } from '../compone
 import { RoutesConfig } from '../config/routes.config';
 import Hero from '../components/Hero';
 
-import ProcessServerImg from '../assets/img/process-serving-in-bedford.jpg';
-import LegalCourierImg from '../assets/img/legal-courier-bedford.jpg';
-import { useRouteMatch } from 'react-router-dom';
+const ProcessServerImg = '/img/process-serving-in-bedford.jpg';
+const LegalCourierImg = '/img/legal-courier-bedford.jpg';
 
 const Services: React.FC = () => {
 

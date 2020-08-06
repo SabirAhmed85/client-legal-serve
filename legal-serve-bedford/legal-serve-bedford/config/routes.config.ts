@@ -58,7 +58,7 @@ export const RoutesConfig = Object.freeze<Record<string, Route>>({
       }
     },
   Contact: {
-    path: '/contact',
+    path: '/contact-legal-serve',
     exact: true,
     displayName: 'Contact',
     activeClassName: 'is-active',

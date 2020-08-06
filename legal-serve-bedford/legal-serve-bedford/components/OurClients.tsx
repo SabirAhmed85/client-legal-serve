@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import device from '../config/device.config';
 import { ClientsBannerConfig, ClientsBannerPanelConfig, ClientsLogos } from '../config/clients-banner.config';
 
-import OurServicesImg from '../assets/img/court-order-serving-bedford.png';
+const OurServicesImg = '/img/court-order-serving-bedford.png';
 
 // types
 type OurClientsProps = {
@@ -13,7 +13,7 @@ type OurClientsProps = {
   clientType?: string;
 };
 
-const ClientLogoImages = require.context('../assets/img/client-logos/', true);
+// const ClientLogoImages = require.context('/img/client-logos/', true);
 
 // 'styled-components' specific to OurClients.tsx component
 const StyledColumn = styled.div`
@@ -73,7 +73,7 @@ const clientsSlidesContent = (props, showLocalAuth?, showLawPractises?) => {
       ) {
         clientsLogosHtml.push(
           <StyledColumn key={ClientLogo.imageUrl} className='column has-text-centered'>
-            <img src={OurServicesImg} alt={ClientLogo.altTag}/>
+            <img src={`/img/client-logos/${ClientLogo.imageUrl}`} alt={ClientLogo.altTag}/>
           </StyledColumn>
         );
       }

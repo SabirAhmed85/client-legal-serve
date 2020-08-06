@@ -1,5 +1,5 @@
 import React from 'react';
-import { MetaInfo, Hero, OurPromise } from '../../components';
+import { MetaInfo, Hero, OurPromise } from '../components';
 import { RoutesConfig } from '../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OurClients from '../components/OurClients';

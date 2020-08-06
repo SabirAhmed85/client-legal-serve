@@ -5,10 +5,10 @@ import Hero from '../components/Hero';
 import SilverBanner from '../components/SilverBanner';
 import OurPromise from '../components/OurPromise';
 
-const OurServicesImg = require('../assets/img/court-order-serving-bedford.png');
-const ProcessServerImg = require('../assets/img/process-serving-in-bedford.jpg');
-const LegalCourierImg = require('../assets/img/legal-courier-bedford.jpg');
-const LocalKnowledgeImg = require('../assets/img/local-knowledge-bedford.jpg');
+const OurServicesImg = '/img/court-order-serving-bedford.png';
+const ProcessServerImg = '/img/process-serving-in-bedford.jpg';
+const LegalCourierImg = '/img/legal-courier-bedford.jpg';
+const LocalKnowledgeImg = '/img/local-knowledge-bedford.jpg';
 
 const Home: React.FC = () => (
   <div className='view-wrapper'>
