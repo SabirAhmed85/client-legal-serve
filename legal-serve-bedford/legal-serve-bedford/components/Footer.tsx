@@ -20,36 +20,24 @@ const Footer: React.FC = () => (
           </div>
           <div className='navbar-routes'>
             <Link
-              className='navbar-item'
               href={RoutesConfig.Home.path}
-              exact={RoutesConfig.Home.exact}
-              activeClassName={RoutesConfig.Home.activeClassName}
             >
-              <span>{RoutesConfig.Home.displayName}</span>
+              <span className='navbar-item'>{RoutesConfig.Home.displayName}</span>
             </Link>
             <Link
-              className='navbar-item'
               href={RoutesConfig.Services.path}
-              exact={RoutesConfig.Services.exact}
-              activeClassName={RoutesConfig.Services.activeClassName}
             >
-              <span>{RoutesConfig.Services.displayName}</span>
+              <span className='navbar-item'>{RoutesConfig.Services.displayName}</span>
             </Link>
             <Link
-              className='navbar-item'
               href={RoutesConfig.Contact.path}
-              exact={RoutesConfig.Contact.exact}
-              activeClassName={RoutesConfig.Contact.activeClassName}
             >
-              <span>{RoutesConfig.Contact.displayName}</span>
+              <span className='navbar-item'>{RoutesConfig.Contact.displayName}</span>
             </Link>
             <Link
-              className='navbar-item'
               href={RoutesConfig.Clients.path}
-              exact={RoutesConfig.Clients.exact}
-              activeClassName={RoutesConfig.Clients.activeClassName}
             >
-              <span>{RoutesConfig.Clients.displayName}</span>
+              <span className='navbar-item'>{RoutesConfig.Clients.displayName}</span>
             </Link>
           </div>
         </div>

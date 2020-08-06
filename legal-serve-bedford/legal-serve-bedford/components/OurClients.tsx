@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import device from '../config/device.config';
 import { ClientsBannerConfig, ClientsBannerPanelConfig, ClientsLogos } from '../config/clients-banner.config';
+
 import OurServicesImg from '../assets/img/court-order-serving-bedford.png';
 
 // types
