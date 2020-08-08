@@ -1,8 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import device from '../config/device.config';
+import device from '../../config/device.config';
 
-// 'styled-components' specific to SilverBanner.tsx component
 const SilverBannerOuter = styled.div`
   background: #F9F9F9;
   border-bottom: 1px solid #f3f3f3;
@@ -25,15 +23,4 @@ const SilverBannerInner = styled.div`
   }
 `;
 
-const SilverBanner = (props) => {
-
-  return (
-    <SilverBannerOuter className={props.className}>
-      <SilverBannerInner>
-        {props.children}
-      </SilverBannerInner>
-    </SilverBannerOuter>
-  );
-};
-
-export default SilverBanner;
+export { SilverBannerOuter, SilverBannerInner };

@@ -1,11 +1,10 @@
 import React from 'react';
-import { MetaInfo, OurPromise, InlineContactPanel, OurClients } from '../../../components';
+import { MetaInfo, OurPromise, InlineContactPanel, OurClients, Hero } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
-import Hero from '../../components/Hero';
 
-import CourtOrderServingImg from '../../assets/img/court-order-serving.jpg';
-import LocalKnowledgeImg from '../../assets/img/local-knowledge-bedford.jpg';
-import ProcessServingImg from '../../assets/img/process-serving-in-bedford.jpg';
+const CourtOrderServingImg = '/img/court-order-serving.jpg';
+const LocalKnowledgeImg = '/img/local-knowledge-bedford.jpg';
+const ProcessServingImg = '/img/process-serving-in-bedford.jpg';
 
 const ProcessServerBedford: React.FC = () => (
   <section className='view-wrapper'>

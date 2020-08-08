@@ -2,8 +2,8 @@ import React from 'react';
 import { MetaInfo, Hero, OurPromise } from '../components';
 import { RoutesConfig } from '../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import OurClients from '../components/OurClients';
-import MainContactForm from '../components/MainContactForm';
+import OurClients from '../components/our-clients/our-clients';
+import MainContactForm from '../components/main-contact-form/main-contact-form';
 import styled from 'styled-components';
 
 const StyledCardHeader = styled.div`

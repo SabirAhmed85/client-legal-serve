@@ -1,4 +1,6 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../theme';
 import App from 'next/app';
 import AppLayout from '../layouts/app-layout';
 import '../assets/style/main.scss';
@@ -8,9 +10,11 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <AppLayout>
-        <Component {...pageProps} />
-      </AppLayout>
+      <ThemeProvider theme={theme}>
+        <AppLayout>
+          <Component {...pageProps} />
+        </AppLayout>
+      </ThemeProvider>
     )
   }
 }

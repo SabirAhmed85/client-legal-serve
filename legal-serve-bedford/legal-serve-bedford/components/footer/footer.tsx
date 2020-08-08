@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { RoutesConfig } from '../config/routes.config';
+import { RoutesConfig } from '../../config/routes.config';
 
 const MainLogo = '/img/logo-NEW.svg';
 

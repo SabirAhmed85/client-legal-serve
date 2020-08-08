@@ -1,7 +1,7 @@
 import React from 'react';
-import { MetaInfo, OurPromise, InlineContactPanel, Card } from '../components';
-import { RoutesConfig } from '../config/routes.config';
-import Hero from '../components/Hero';
+import { MetaInfo, OurPromise, InlineContactPanel, Card } from '../../components';
+import { RoutesConfig } from '../../config/routes.config';
+import Hero from '../../components/hero/hero';
 
 const Clients: React.FC = () => {
 

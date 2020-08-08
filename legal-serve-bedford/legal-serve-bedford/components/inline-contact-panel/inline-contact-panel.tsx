@@ -1,5 +1,5 @@
 import React from 'react';
-import MainContactForm from './MainContactForm';
+import MainContactForm from '../main-contact-form/main-contact-form';
 
 const InlineContactPanel = () => (
   <div>

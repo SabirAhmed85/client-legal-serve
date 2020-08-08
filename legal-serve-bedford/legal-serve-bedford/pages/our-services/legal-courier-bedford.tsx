@@ -1,10 +1,9 @@
 import React from 'react';
-import { MetaInfo, OurPromise, InlineContactPanel, OurClients, Card } from '../../../components';
+import { MetaInfo, OurPromise, InlineContactPanel, OurClients, Card, Hero } from '../../components';
 import { RoutesConfig } from '../../config/routes.config';
-import Hero from '../../components/Hero';
 
-import OurServicesImg from '../../assets/img/legal-courier-bedford.jpg';
-import DataComplianceImg from '../../assets/img/data-compliance.jpg';
+const OurServicesImg = '/img/legal-courier-bedford.jpg';
+const DataComplianceImg = '/img/data-compliance.jpg';
 
 const LegalCourierBedford: React.FC = () => (
   <section className='view-wrapper'>

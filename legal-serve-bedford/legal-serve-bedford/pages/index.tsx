@@ -1,9 +1,9 @@
 import React from 'react';
 import { MetaInfo, OurClients, Card } from '../components';
 import { RoutesConfig } from '../config/routes.config';
-import Hero from '../components/Hero';
-import SilverBanner from '../components/SilverBanner';
-import OurPromise from '../components/OurPromise';
+import Hero from '../components/hero/hero';
+import SilverBanner from '../components/silver-banner/silver-banner';
+import OurPromise from '../components/our-promise-banner/our-promise-banner';
 
 const OurServicesImg = '/img/court-order-serving-bedford.png';
 const ProcessServerImg = '/img/process-serving-in-bedford.jpg';

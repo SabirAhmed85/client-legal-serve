@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import ServiceList from './ServiceList';
-import { ServiceInfo, ServiceInfoConfig } from '../config/services.config';
+import ServiceList from '../service-list/service-list';
+import { ServiceInfo, ServiceInfoConfig } from '../../config/services.config';
 
 export interface HeroProps {
   item: string;

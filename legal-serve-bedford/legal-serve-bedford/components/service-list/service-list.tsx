@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { ServiceInfo } from '../config/services.config';
+import { ServiceInfo } from '../../config/services.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type ServiceListProps = {

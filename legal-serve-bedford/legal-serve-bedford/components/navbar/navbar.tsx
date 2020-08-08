@@ -1,33 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { RoutesConfig } from '../config/routes.config';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled from 'styled-components';
+import { RoutesConfig } from '../../config/routes.config';
+
+import { BurgerMenu, BurgerMenuIcon } from './navbar.style';
 
 const MainLogo = '/img/logo-NEW.svg';
-
-// 'styled-components' specific to BackToTop.tsx component
-const BurgerMenu = styled.button.attrs(() => ({
-  role: 'button',
-  'aria-label': 'Menu'
-}))`
-  border:none;
-  background: none;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-left: -1rem;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 50%;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: opacity 0.4s ease, bottom 0.4s ease;
-`;
-
-const BurgerMenuIcon = styled(FontAwesomeIcon)`
-  color: #fff;
-  font-size: 1.75em;
-`;
 
 const NavBar: React.FC = () => (
   <nav

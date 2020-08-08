@@ -1,8 +1,8 @@
 import React from 'react';
-import { MetaInfo, Hero, OurPromise } from '../../components';
+import { MetaInfo, Hero, OurPromise } from '../components';
 import { RoutesConfig } from '../config/routes.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import OurClients from '../components/OurClients';
+import OurClients from '../components/our-clients/our-clients';
 import styled from 'styled-components';
 
 const StyledContactIcon = styled(FontAwesomeIcon)`
