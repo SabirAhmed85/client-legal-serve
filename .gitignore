@@ -1,8 +1,19 @@
 _notes/
 
+# dependancy directories #
 node_modules/
+
+# IDE #
 *.code-workspace
 */.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# next js build output #
+.next
 
 # OS generated files #
 ######################

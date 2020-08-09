@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
   "/contact-legal-serve-pre-formik": "pages/contact-legal-serve-pre-formik.html",
   "/contact-legal-serve": "pages/contact-legal-serve.html",
   "/": "pages/index.html",
@@ -9,6 +10,5 @@
   "/our-services/legal-courier-bedford": "pages/our-services/legal-courier-bedford.html",
   "/our-services/process-server-bedford": "pages/our-services/process-server-bedford.html",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }

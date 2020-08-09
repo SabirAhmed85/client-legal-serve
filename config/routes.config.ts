@@ -7,8 +7,8 @@ export type Route = {
   readonly displayName: string;
   readonly activeClassName: string;
   readonly metaInfo: {
-    readonly title?: string;
-    readonly description?: string;
+    readonly title: string;
+    readonly description: string;
   };
 };
 

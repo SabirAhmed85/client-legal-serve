@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -247,7 +247,7 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("Wplz");
@@ -1078,7 +1078,7 @@ __webpack_require__.d(__webpack_exports__, "e", function() { return /* reexport 
 __webpack_require__.d(__webpack_exports__, "j", function() { return /* reexport */ silver_banner["a" /* default */]; });
 __webpack_require__.d(__webpack_exports__, "b", function() { return /* reexport */ card; });
 
-// UNUSED EXPORTS: NotFound, MainContactForm
+// UNUSED EXPORTS: NotFound, MainContactForm, SEO
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__("cDcd");
@@ -1480,7 +1480,11 @@ CardTitle.defaultProps = {
   className: ''
 };
 /* harmony default export */ var card = (Card);
+// EXTERNAL MODULE: ./components/seo/seo.tsx
+var seo = __webpack_require__("rm52");
+
 // CONCATENATED MODULE: ./components/index.ts
+
 
 
 
@@ -2929,10 +2933,96 @@ function makePublicRouterInstance(router) {
 
 /***/ }),
 
+/***/ "rm52":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SEO; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("xnum");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const SEO = ({
+  title,
+  description,
+  canonical,
+  css,
+  js,
+  image
+}) => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, null, __jsx("title", null, title), __jsx("meta", {
+  name: "description",
+  content: description
+}), __jsx("meta", {
+  name: "viewport",
+  content: "width=device-width,minimum-scale=1,initial-scale=1"
+}), __jsx("meta", {
+  property: "og:type",
+  content: "website"
+}), __jsx("meta", {
+  name: "og:title",
+  property: "og:title",
+  content: title
+}), __jsx("meta", {
+  name: "og:description",
+  property: "og:description",
+  content: description
+}), __jsx("meta", {
+  property: "og:site_name",
+  content: "Proper Noun"
+}), __jsx("meta", {
+  property: "og:url",
+  content: `${canonical}`
+}), __jsx("meta", {
+  name: "twitter:card",
+  content: "summary"
+}), __jsx("meta", {
+  name: "twitter:title",
+  content: title
+}), __jsx("meta", {
+  name: "twitter:description",
+  content: description
+}), __jsx("meta", {
+  name: "twitter:site",
+  content: "@propernounco"
+}), __jsx("meta", {
+  name: "twitter:creator",
+  content: "@propernounco"
+}), css && __jsx("link", {
+  rel: "stylesheet",
+  href: `${css}`
+}), image ? __jsx("meta", {
+  property: "og:image",
+  content: `${image}`
+}) : __jsx("meta", {
+  property: "og:image",
+  content: "https://www.propernoun.co/static/images/proper-noun-social.png"
+}), image && __jsx("meta", {
+  name: "twitter:image",
+  content: `${image}`
+}), canonical && __jsx("link", {
+  rel: "canonical",
+  href: `${canonical}`
+}), js && __jsx("script", {
+  type: "text/javascript",
+  src: `${js}`
+}));
+
+/***/ }),
+
 /***/ "uhWA":
 /***/ (function(module, exports) {
 
 module.exports = require("@fortawesome/react-fontawesome");
+
+/***/ }),
+
+/***/ "xnum":
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 
