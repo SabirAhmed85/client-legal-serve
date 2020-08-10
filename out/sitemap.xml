@@ -1,80 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/404.html
-    </loc>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/contact-legal-serve.html
-    </loc>
-  </url>
 
-  <url>
-    <loc>
-      https://legalservebedford.co.uk
-    </loc>
-  </url>
+<url>
+  <loc>https://legalservebedford.co.uk/</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-services</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/contact-legal-serve</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-services/process-server-bedford</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-services/legal-courier-bedford</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients/bedfordshire-clients</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients/buckinghamshire-clients</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients/local-authority-clients</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients/cambridgeshire-clients</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients/clients-in-surrounding-areas</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://legalservebedford.co.uk/our-clients/legal-practise-clients</loc>
+  <lastmod>2020-08-10T11:12:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients.html
-    </loc>
-  </url>
 
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-services.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients/bedfordshire-clients.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients/buckinghamshire-clients.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients/cambridgeshire-clients.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients/clients-in-surrounding-areas.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients/legal-practise-clients.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-clients/local-authority-clients.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-services/legal-courier-bedford.html
-    </loc>
-  </url>
-
-  <url>
-    <loc>
-      https://legalservebedford.co.uk/our-services/process-server-bedford.html
-    </loc>
-  </url>
 </urlset>
