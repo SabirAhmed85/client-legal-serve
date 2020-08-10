@@ -1,14 +1,10 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/contact-legal-serve-pre-formik": "pages/contact-legal-serve-pre-formik.html",
-  "/contact-legal-serve": "pages/contact-legal-serve.html",
-  "/": "pages/index.html",
-  "/our-clients/[type]": "pages/our-clients/[type].js",
-  "/our-clients": "pages/our-clients.html",
-  "/our-services": "pages/our-services.html",
-  "/our-services/legal-courier-bedford": "pages/our-services/legal-courier-bedford.html",
-  "/our-services/process-server-bedford": "pages/our-services/process-server-bedford.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/our-services": "pages/our-services.js",
+  "/our-clients": "pages/our-clients.js",
+  "/": "pages/index.js",
+  "/our-clients/[type]": "pages/our-clients/[type].js",
+  "/contact-legal-serve": "pages/contact-legal-serve.js"
 }
