@@ -39,6 +39,7 @@ export default class CustomDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
+                    <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
                     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
                 </Head>
                 <body>
