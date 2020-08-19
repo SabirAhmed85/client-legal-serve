@@ -18,7 +18,14 @@ const contactFormValidationSchema = Yup.object({
   Message: Yup.string().required('Please fill in a Message.')
 });
 
-const getSubmitCallback = () =>
+const getSubmitCallback = /* (values) =>
+  fetch('/api/send-email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(values)
+  });
+  */
+ () =>
   values => {
     axios({
       method: 'POST',

@@ -1,12 +1,18 @@
 import React from 'react';
-import Link from 'next/link';
 import { RoutesConfig } from '../../config/routes.config';
+import NavBarLink from './navbar-link/navbar-link';
 
 import { BurgerMenu, BurgerMenuIcon } from './navbar.style';
 
 const MainLogo = '/img/logo-NEW.svg';
 
-const NavBar: React.FC = () => (
+type NavBarProps = {
+  footerBar?: boolean;
+};
+
+const NavBar: React.FC<NavBarProps> = ({
+  footerBar
+}) => (
   <nav
     role='navigation'
     className='navbar'
@@ -20,35 +26,34 @@ const NavBar: React.FC = () => (
         <span className='level-right'>07853 166 674</span>
       </div>
       <div className='navbar-routes'>
-        <Link
-          href={RoutesConfig.Home.path}
-        >
-          <span className='navbar-item'>{RoutesConfig.Home.displayName}</span>
-        </Link>
-        <div className='seperator' />
-        <Link
-          href={RoutesConfig.Services.path}
-        >
-          <span className='navbar-item'>{RoutesConfig.Services.displayName}</span>
-        </Link>
-        <div className='seperator' />
-        <Link
-          href={RoutesConfig.Contact.path}
-        >
-          <span className='navbar-item'>{RoutesConfig.Contact.displayName}</span>
-        </Link>
-        <div className='seperator' />
-        <BurgerMenu
-          className='is-hidden-tablet'>
-          <BurgerMenuIcon
-            className='is-visible-mobile'
-            icon='bars'></BurgerMenuIcon>
-        </BurgerMenu>
-        <Link
-          href={RoutesConfig.Clients.path}
-        > 
-          <span className='navbar-item is-hidden-mobile'>{RoutesConfig.Clients.displayName}</span>
-        </Link>
+        <NavBarLink
+          {...RoutesConfig.Home}
+          footerBar={footerBar}
+          ></NavBarLink>
+        <NavBarLink
+          {...RoutesConfig.Services}
+          footerBar={footerBar}
+          ></NavBarLink>
+        <NavBarLink
+          {...RoutesConfig.Contact}
+          footerBar={footerBar}
+          ></NavBarLink>
+        {(() => { if (!footerBar) {
+          return (
+            <BurgerMenu
+              className='is-hidden-tablet'>
+              <BurgerMenuIcon
+                className='is-visible-mobile'
+                icon='bars'></BurgerMenuIcon>
+            </BurgerMenu>
+          )
+        }})()}
+        <NavBarLink
+          {...RoutesConfig.Clients}
+          footerBar={footerBar}
+          lastLink={true}
+          isHiddenMobile={!footerBar && true}
+          ></NavBarLink>
       </div>
     </div>
   </nav>

@@ -10,6 +10,7 @@ import MainContactForm from './main-contact-form/main-contact-form';
 import InlineContactPanel from './inline-contact-panel/inline-contact-panel';
 import SilverBanner from './silver-banner/silver-banner';
 import Card from './card/card';
+import { SEO }  from './seo/seo';
 
 export {
   Footer,
@@ -23,5 +24,6 @@ export {
   MainContactForm,
   InlineContactPanel,
   SilverBanner,
-  Card
+  Card,
+  SEO
 };
