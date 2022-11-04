@@ -187,7 +187,7 @@ class ContactLegalServe extends React.Component<Props, State> {
                   <h3 className='title large-title'>Additional Contact Info.</h3>
                   <hr />
                   <div className='content'>
-                    <p><StyledContactIcon icon='phone'/><strong>Phone</strong>: (01234) 92 48 47</p>
+                    <p><StyledContactIcon icon='phone'/><strong>Phone</strong>: (01234) 481 451</p>
                     <p><StyledContactIcon icon='mobile'/><strong>Mobile</strong>: 07853 166 674</p>
                     <p><StyledContactIcon icon='at'/><strong>Email</strong>: info@legalservebedford.co.uk</p>
                   </div>
