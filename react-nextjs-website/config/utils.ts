@@ -1,17 +1,21 @@
 import { useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
-function ScrollToTop({ history }) {
+function ScrollToTop() {
+  const router = useRouter();
+
   useEffect(() => {
-    const unlisten = history.listen(() => {
+    const handleRouteChange = () => {
       window.scrollTo(0, 0);
-    });
-    return () => {
-      unlisten();
-    }
-  }, [history]);
+    };
 
-  return (null);
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
+
+  return null;
 }
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;

@@ -52,19 +52,14 @@ type CardTitleProps = {
   className?: string;
   content: string;
 };
-export const CardTitle = (props: CardTitleProps) => {
-  return (props.size === 'large') ?
+export const CardTitle = ({ size = 'large', content, className = '' }: CardTitleProps) => {
+  return (size === 'large') ?
     (
-      <h3 className={props.className}>{props.content}</h3>
+      <h3 className={className}>{content}</h3>
     ) :
     (
-      <h4 className={props.className}>{props.content}</h4>
+      <h4 className={className}>{content}</h4>
     )
-};
-CardTitle.defaultProps = {
-  size: 'large',
-  content: null,
-  className: ''
 };
 
 export default Card;

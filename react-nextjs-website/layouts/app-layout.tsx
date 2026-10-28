@@ -1,7 +1,11 @@
 import React, { Fragment } from 'react';
 import { NavBar, BackToTop, Footer } from '../components';
 
-const Layout: React.FunctionComponent = ({
+type LayoutProps = {
+  children?: React.ReactNode;
+};
+
+const Layout: React.FC<LayoutProps> = ({
   children,
   // deviceType: { mobile, tablet, desktop },
 }) => {
