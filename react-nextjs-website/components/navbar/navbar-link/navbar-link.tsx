@@ -22,6 +22,7 @@ const NavBarLink: React.FC<NavBarLinkProps> = ({
     <Link
       href={path}
       passHref
+      legacyBehavior
     >
       <StyledLink
         className={`${(isHiddenMobile) ? 'is-hidden-mobile' : ''}`}>

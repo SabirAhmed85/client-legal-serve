@@ -67,7 +67,10 @@ const clientsSlidesContent = (props, showLocalAuth?, showLawPractises?) => {
   return html;
 };
 
-const OurClients = (props: OurClientsProps) => {
+const OurClients = ({
+  minimal = false,
+  clientType = 'default'
+}: OurClientsProps) => {
   const showLocalAuth = useRef<string>('show');
   const showLawPractises = useRef<string>('hide');
   const [show, setShow] = useState<boolean>(false);
@@ -86,15 +89,15 @@ const OurClients = (props: OurClientsProps) => {
   return (
     <div className='columns'>
       <div className='column' style={{position: 'relative'}}>
-        {props.minimal ? '' : <h3 className='title large-title'>Our Clients</h3>}
+        {minimal ? '' : <h3 className='title large-title'>Our Clients</h3>}
         <div className='content clients-slides'>
-          {clientsSlidesContent(props, showLocalAuth, showLawPractises)}
+          {clientsSlidesContent({ minimal, clientType }, showLocalAuth, showLawPractises)}
         </div>
         {(() => { 
-          if (ClientsBannerConfig[props.clientType].panels.length > 1) {
+          if (ClientsBannerConfig[clientType].panels.length > 1) {
             return (
               <NextSlideLink
-                minimal={props.minimal}
+                minimal={minimal}
                 onClick={() => nextSlide()}>
                 <AngleRightIcon icon='angle-right' />
               </NextSlideLink>
@@ -104,11 +107,6 @@ const OurClients = (props: OurClientsProps) => {
       </div>
     </div>
   );
-};
-
-OurClients.defaultProps = {
-  minimal: false,
-  clientType: 'default'
 };
 
 export default OurClients;

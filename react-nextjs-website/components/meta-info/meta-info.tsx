@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 type MetaInfoProps = {
   readonly title?: string;
@@ -7,12 +7,12 @@ type MetaInfoProps = {
 };
 
 const MetaInfo: React.FC<MetaInfoProps> = React.memo(({ title, description }) => (
-  <Helmet>
+  <Head>
     <title>{title}</title>
-    <meta name='og:title' content={title} />
+    <meta property='og:title' content={title} />
     <meta name='description' content={description} />
-    <meta name='og:description' content={description} />
-  </Helmet>
+    <meta property='og:description' content={description} />
+  </Head>
 ));
 
 MetaInfo.displayName = 'MetaInfo';
