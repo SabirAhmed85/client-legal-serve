@@ -18,28 +18,34 @@ const contactFormValidationSchema = Yup.object({
   Message: Yup.string().required('Please fill in a Message.')
 });
 
-const getSubmitCallback = /* (values) =>
-  fetch('/api/send-email', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(values)
-  });
-  */
- () =>
-  values => {
+const getSubmitCallback = () =>
+  (values, formikHelpers) => {
     axios({
       method: 'POST',
-      url: 'http://legalservebedford.co.uk/contact-process.php?action=processContact',
-      data: JSON.stringify(values)
-    }).then((response) => {
-      console.log(response.data);
-      if (response.data.status === '\"Success\"'){
-        alert("Message Sent.");
-      } else {
-        console.log(response);
-        alert("Message failed to send.")
-      }
-    });
+      url: '/api/send-email',
+      headers: { 'Content-Type': 'application/json' },
+      data: values
+    })
+      .then((response) => {
+        if (
+          response.data?.status === 'Success' ||
+          response.data?.status === '"Success"' ||
+          response.data === 'Success' ||
+          response.data === '"Success"'
+        ) {
+          alert('Message Sent.');
+          if (formikHelpers?.resetForm) {
+            formikHelpers.resetForm();
+          }
+        } else {
+          console.error(response);
+          alert('Message failed to send.');
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Message failed to send.');
+      });
   };
 
 const MainContactForm = () => {

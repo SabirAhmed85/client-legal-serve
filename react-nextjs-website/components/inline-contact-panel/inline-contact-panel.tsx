@@ -13,9 +13,7 @@ const InlineContactPanel = () => (
           <div className='card-content'>
             <h5 className='small-title'><strong>Or alternatively, you can contact us directly using any of the below methods:</strong></h5>
             <hr />
-            <p><strong>Phone</strong>: (01234) 481 451</p>
-            <br />
-            <p><strong>Mobile</strong>: 07853 166 674</p>
+            <p><strong>Phone</strong>: 07853 166 674</p>
             <br />
             <p><strong>Email</strong>: info@legalservebedford.co.uk</p>
             <br />
