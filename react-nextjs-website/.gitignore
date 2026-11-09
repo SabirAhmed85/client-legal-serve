@@ -1,23 +1,33 @@
 _notes/
 
-# dependancy directories #
+# dependencies
 node_modules/
+.pnp
+.pnp.js
 
-# IDE #
+# testing
+coverage/
+
+# next.js & build outputs
+.next/
+out/
+build/
+dist/
+
+# vercel
+.vercel/
+
+# IDE
 *.code-workspace
 */.vscode/
+.idea/
 
-# Logs
+# debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# next js build output #
-.next
-out/
-
-# OS generated files #
-######################
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -25,6 +35,12 @@ out/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# local env & backup files
 sendgrid.env
+.env
 .env*.local
 *.bak
+
+# typescript
+*.tsbuildinfo
